@@ -1,0 +1,43 @@
+@startuml C4_2_Container
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+
+!include <office/Servers/database_server>
+!include <office/Servers/file_server>
+!include <office/Servers/application_server>
+!include <office/Concepts/service_application>
+!includeurl <aws/General/client/client.puml>
+AddContainerTag("conApp", $sprite="service_application", $legendText="console app container")
+AddPersonTag("customer", $sprite="osa_user_large_group", $legendText="aggregated user")
+AddPersonTag("admin", $sprite="osa_user_audit,color=red", $legendSprite="osa_user_audit,scale=0.25,color=red", $legendText="administration user")
+AddContainerTag("db", $sprite="database_server", $legendText="database container")
+AddContainerTag("webApp", $sprite="application_server", $legendText="web app container")
+AddContainerTag("browser", $sprite="client", $legendText="browser container")
+HIDE_STEREOTYPE()
+
+title C4 Container Diagram for ILM application
+
+Person(admin, "Admin", $tags="admin")
+Person(tutor, "Tutor" )
+Person_Ext(user, "Candidate", $tags="customer")
+
+System_Boundary(c1, "ILM System") {
+    Container(browser, "Web Browser", "The web browser used by the user.", $tags="browser")
+    Container(ilm, "ILM", "The ILM application.", $tags="conApp")
+    Container(webApp, "Web Application", "The web application for managing the ILM program.", $tags="webApp")
+    ContainerDb(db, "Database", "Holds all the data for the ILM program.", $tags="db")
+}
+
+browser --> ilm: Makes calls to the ILM application
+webApp -r-> browser: Delivers to the customer's browser
+db <-- ilm: Reads/Writes to (JPA)
+admin --> browser: View reports
+tutor --> browser: Mark attendance
+user --> browser: Monitor progress
+
+
+
+@enduml
+
