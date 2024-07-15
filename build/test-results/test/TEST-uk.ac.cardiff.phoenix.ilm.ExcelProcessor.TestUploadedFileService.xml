@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.ac.cardiff.phoenix.ilm.ExcelProcessor.TestUploadedFileService" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-22T21:22:02" hostname="DSA10F60A8A6F79" time="0.107">
+  <properties/>
+  <testcase name="testProcessUploadedFile_Successful()" classname="uk.ac.cardiff.phoenix.ilm.ExcelProcessor.TestUploadedFileService" time="0.107"/>
+  <system-out><![CDATA[2024-01-22T21:22:02.553Z  INFO 10856 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [uk.ac.cardiff.phoenix.ilm.ExcelProcessor.TestUploadedFileService]: TestUploadedFileService does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-22T21:22:02.605Z  INFO 10856 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration uk.ac.cardiff.phoenix.ilm.IlmApplication for test class uk.ac.cardiff.phoenix.ilm.ExcelProcessor.TestUploadedFileService
+2024-01-22T21:22:02.677Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: asdffefe@admiralgroup.co.uk
+2024-01-22T21:22:02.689Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: sdjnfvs@amdijfl.co.uk
+2024-01-22T21:22:02.705Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

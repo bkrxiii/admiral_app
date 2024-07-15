@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{base-template :: headFragment(${title_insert})}">
+    <title>Default Title</title></head>
+<body>
+<!-- Navbar -->
+<nav th:replace="~{base-template :: navbar}"></nav>
+<nav th:replace="~{base-template :: navbar-admin}"></nav>
+
+<!-- Content -->
+
+<div th:if="${message}" class="alert alert-warning" th:text="${message}">
+    Error: message error
+</div>
+
+
+<div class="container mt-3" >
+    <h2 class="mb-4">File Upload Form</h2>
+
+    <form th:action="@{/admin/upload}" method="post" enctype="multipart/form-data" class="mb-4">
+        <div class="form-group">
+            <label for="file">Choose a file:</label>
+            <input type="file" id="file" name="file" class="form-control-file" accept=".csv, .txt, .xlsx, .xls">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Upload File</button>
+    </form>
+</div>
+
+
+<div class="container mt-3">
+
+    <!-- Add a table with a header -->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>File Name</th>
+            <th>Date / Time</th>
+            <th>Delete</th>
+            <th>Process Data</th>
+            <th>Download</th>
+            <!-- Add more <th> elements for additional columns if needed -->
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Iterate over the uploadedFiles list -->
+        <tr th:each="file : ${uploadedFiles}">
+            <!-- Display file name and other relevant information in each row -->
+            <td th:text="${file.fileName}"></td>
+            <td th:text="${file.uploadDateTime}"></td>
+            <td><a class="btn btn-danger btn-sm" th:href="@{'/admin/upload/delete/' + ${file.id}}">Delete</a></td>
+            <td><a class="btn btn-success btn-sm" th:href="@{'/admin/upload/process/' + ${file.id}}">Process</a></td>
+            <td><a class="btn btn-info btn-sm" th:href="@{'/admin/upload/download/' + ${file.id}}">Download</a></td>
+
+            <!-- Add more <td> elements for additional columns if needed -->
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Bootstrap scripts -->
+<div th:replace="~{base-template :: bootstrap-scripts}"></div>
+</body>
+</html>

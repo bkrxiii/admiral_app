@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TestSeleniumFileUpload</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TestSeleniumFileUpload</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/uk.ac.cardiff.phoenix.ilm.selenium.html">uk.ac.cardiff.phoenix.ilm.selenium</a> &gt; TestSeleniumFileUpload</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">8.419s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">downloadReport()</td>
+<td class="success">8.419s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-01-22T21:23:11.413Z  INFO 10856 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [uk.ac.cardiff.phoenix.ilm.selenium.TestSeleniumFileUpload]: TestSeleniumFileUpload does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-22T21:23:11.414Z  INFO 10856 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration uk.ac.cardiff.phoenix.ilm.IlmApplication for test class uk.ac.cardiff.phoenix.ilm.selenium.TestSeleniumFileUpload
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:23:11.436Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.TestSeleniumFileUpload       : Starting TestSeleniumFileUpload using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:23:11.436Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.TestSeleniumFileUpload       : The following 1 profile is active: &quot;test&quot;
+2024-01-22T21:23:11.656Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:23:11.726Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:23:11.769Z  INFO 10856 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-01-22T21:23:11.769Z  INFO 10856 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-22T21:23:11.770Z  INFO 10856 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-22T21:23:11.803Z  INFO 10856 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-22T21:23:11.803Z  INFO 10856 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 366 ms
+2024-01-22T21:23:11.822Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:23:11.833Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:23:11.835Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:23:11.836Z  INFO 10856 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2024-01-22T21:23:11.837Z  INFO 10856 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection conn764: url=jdbc:h2:mem:testdb user=SA
+2024-01-22T21:23:11.837Z  INFO 10856 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2024-01-22T21:23:11.837Z  WARN 10856 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-22T21:23:11.857Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:23:11.857Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:23:11.857Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:23:11.857Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:23:11.858Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:23:11.858Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:23:11.858Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:23:11.859Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:23:11.859Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:23:11.942Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:23:11.955Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:23:12.045Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:23:12.051Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:23:12.087Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3c4df5ce, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5dbe01ac, org.springframework.security.web.context.SecurityContextHolderFilter@21f8fee3, org.springframework.security.web.header.HeaderWriterFilter@6b9b09d2, org.springframework.security.web.csrf.CsrfFilter@1ea99243, org.springframework.security.web.authentication.logout.LogoutFilter@1e3fde43, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@149ef3a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73114b15, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4bb06d61, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@707b2445, org.springframework.security.web.access.ExceptionTranslationFilter@185419b7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@495c9688]
+2024-01-22T21:23:12.128Z  INFO 10856 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55657 (http) with context path ''
+2024-01-22T21:23:12.131Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.TestSeleniumFileUpload       : Started TestSeleniumFileUpload in 0.714 seconds (process running for 148.01)
+2024-01-22T21:23:12.707Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 565mscomplexity is too low
+User(id=1, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=1, role=SU, permissions=[RolePermission(id=1, permission=SU)])], passwordHash=580d625f8b404fb1fd77f535434f7048a43c7cedd297e117e3193804972906e7481365f84f2ca22bdcf19e6baeb71c8d31125f6f897164ccb77c4c91750ab9337bce4ef82cf0126ed9e32092a90517ec, salt=580d625f8b404fb1fd77f535434f7048)
+2024-01-22T21:23:12.719Z  INFO 10856 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Using chromedriver 120.0.6099.109 (resolved driver for Chrome 120)
+2024-01-22T21:23:12.722Z  INFO 10856 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as C:\Users\c22123521\.cache\selenium\chromedriver\win64\120.0.6099.109\chromedriver.exe
+2024-01-22T21:23:13.585Z  INFO 10856 --- [o-auto-4-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-22T21:23:13.585Z  INFO 10856 --- [o-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-22T21:23:13.586Z  INFO 10856 --- [o-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-22T21:23:13.588Z  INFO 10856 --- [o-auto-4-exec-1] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:13.590Z  INFO 10856 --- [o-auto-4-exec-1] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:13.970Z  INFO 10856 --- [o-auto-4-exec-3] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:13.971Z  INFO 10856 --- [o-auto-4-exec-3] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:14.796Z  WARN 10856 --- [o-auto-4-exec-5] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 603mscomplexity is too low
+2024-01-22T21:23:15.419Z  WARN 10856 --- [o-auto-4-exec-5] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 621mscomplexity is too low
+2024-01-22T21:23:15.419Z  INFO 10856 --- [o-auto-4-exec-5] u.a.c.p.i.u.s.RolePermissionServiceImpl  : User logged in. User: su@su.com
+2024-01-22T21:23:15.423Z  INFO 10856 --- [o-auto-4-exec-6] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:15.423Z  INFO 10856 --- [o-auto-4-exec-6] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:15.555Z  INFO 10856 --- [o-auto-4-exec-7] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:15.556Z  INFO 10856 --- [o-auto-4-exec-7] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:15.650Z  INFO 10856 --- [-auto-4-exec-10] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:15.650Z  INFO 10856 --- [-auto-4-exec-10] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:15.651Z  INFO 10856 --- [-auto-4-exec-10] u.a.c.p.i.s.UploadedFileServiceImpl      : File GET ALL.
+2024-01-22T21:23:15.802Z  INFO 10856 --- [o-auto-4-exec-2] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:15.803Z  INFO 10856 --- [o-auto-4-exec-2] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+Received file: candidatetemplate.xlsx
+2024-01-22T21:23:15.819Z  INFO 10856 --- [o-auto-4-exec-2] u.a.c.p.i.s.UploadedFileServiceImpl      : File SAVED. File name: candidatetemplate.xlsx
+2024-01-22T21:23:15.825Z  INFO 10856 --- [o-auto-4-exec-3] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:15.825Z  INFO 10856 --- [o-auto-4-exec-3] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:15.826Z  INFO 10856 --- [o-auto-4-exec-3] u.a.c.p.i.s.UploadedFileServiceImpl      : File GET ALL.
+2024-01-22T21:23:15.911Z  INFO 10856 --- [o-auto-4-exec-5] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:15.911Z  INFO 10856 --- [o-auto-4-exec-5] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:15.912Z  INFO 10856 --- [o-auto-4-exec-5] u.a.c.p.i.s.UploadedFileServiceImpl      : File SEARCH. File ID: 1
+2024-01-22T21:23:15.915Z  INFO 10856 --- [o-auto-4-exec-6] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:15.916Z  INFO 10856 --- [o-auto-4-exec-6] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:21.125Z  INFO 10856 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-22T21:23:21.125Z  INFO 10856 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-01-22T21:23:21.126Z  WARN 10856 --- [    Test worker] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [task-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.6/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2024-01-22T21:23:21.128Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:23:21.130Z  INFO 10856 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2024-01-22T21:23:21.131Z  INFO 10856 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Starting ChromeDriver 120.0.6099.109 (3419140ab665596f21b385ce136419fde0924272-refs/branch-heads/6099@{#1483}) on port 45113
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.4</a> at 22 Jan 2024, 21:23:36</p>
+</div>
+</div>
+</body>
+</html>

@@ -34,6 +34,7 @@ public class Level {
     private List<Workshop> workshops;
 
 
+    // constructors in our application are prime candidates for refactoring
     // Constructor for level class with all fields
     public Level(long levelId, String levelName, String levelDescription, int levelNumber, List<Workshop> workshops) {
         this.levelId = levelId;
@@ -52,5 +53,9 @@ public class Level {
 
     public String toString() {
         return levelName;
+    }
+
+    public Long getId() {
+        return levelId;
     }
 }

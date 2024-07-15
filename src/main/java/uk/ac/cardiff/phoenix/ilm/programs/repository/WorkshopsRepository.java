@@ -17,4 +17,5 @@ public interface WorkshopsRepository extends JpaRepository<Workshop, Long> {
     // not implemented. Creates a set of workshops that are compulsory
     Set<Workshop> findByCompulsory(boolean compulsory);
     Set <Workshop> findWorkshopByComponentOf_LevelNumber(int levelNumber);
+    Set <Workshop> findWorkshopByComponentOf_LevelId(Long levelId);
 }

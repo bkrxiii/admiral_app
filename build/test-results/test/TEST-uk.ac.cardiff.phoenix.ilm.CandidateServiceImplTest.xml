@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-01-22T21:20:58" hostname="DSA10F60A8A6F79" time="0.933">
+  <properties/>
+  <testcase name="testIdUnchangedCandidate()" classname="uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest" time="0.628"/>
+  <testcase name="testILMRegistrationThrowsErrorIfAlreadyRegistered()" classname="uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest" time="0.012"/>
+  <testcase name="testIdGeneratedCandidate()" classname="uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest" time="0.013"/>
+  <testcase name="testFindCandidateById()" classname="uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest" time="0.119"/>
+  <testcase name="testEnrollCandidateInLevel()" classname="uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest" time="0.009"/>
+  <testcase name="testFindCandidateByEmail()" classname="uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest" time="0.106"/>
+  <testcase name="testSaveCandidate()" classname="uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest" time="0.015"/>
+  <testcase name="testILMRegistration()" classname="uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest" time="0.01"/>
+  <testcase name="testEnrollAlreadyEnrolledCandidateInLevel()" classname="uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest" time="0.008"/>
+  <system-out><![CDATA[21:20:45.918 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest]: CandidateServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:20:46.065 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration uk.ac.cardiff.phoenix.ilm.IlmApplication for test class uk.ac.cardiff.phoenix.ilm.CandidateServiceImplTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:20:46.690Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.CandidateServiceImplTest     : Starting CandidateServiceImplTest using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:20:46.694Z DEBUG 10856 --- [    Test worker] u.a.c.p.ilm.CandidateServiceImplTest     : Running with Spring Boot v3.1.5, Spring v6.0.13
+2024-01-22T21:20:46.696Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.CandidateServiceImplTest     : The following 1 profile is active: "dev"
+2024-01-22T21:20:47.875Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:20:48.072Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 178 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:20:48.255Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:20:48.646Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:af89732e-8a89-457c-8898-bad012a8cceb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:20:49.041Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:20:49.166Z  INFO 10856 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-01-22T21:20:49.170Z  INFO 10856 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-22T21:20:49.383Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:20:49.635Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:20:50.086Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:20:50.092Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:20:50.093Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:20:50.093Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:20:50.094Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:20:50.094Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:20:50.094Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:20:50.095Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:20:50.096Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:20:50.997Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:20:51.091Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:20:52.094Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:20:52.161Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:20:52.556Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5c883b3f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a47a011, org.springframework.security.web.context.SecurityContextHolderFilter@1b72f9a, org.springframework.security.web.header.HeaderWriterFilter@555b3ec9, org.springframework.security.web.csrf.CsrfFilter@270a3cef, org.springframework.security.web.authentication.logout.LogoutFilter@b22bebc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6567de86, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55f29d39, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3423f353, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6441da2c, org.springframework.security.web.access.ExceptionTranslationFilter@144fc5fa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@470fc16c]
+2024-01-22T21:20:54.250Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.CandidateServiceImplTest     : Started CandidateServiceImplTest in 7.958 seconds (process running for 10.128)
+2024-01-22T21:20:55.798Z DEBUG 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 997ms
+User(id=1, firstName=John, lastName=Tutor, email=john.tutor@example.com, roles=[UserRole(id=1, role=TUTOR, permissions=[RolePermission(id=1, permission=SCHEDULE_WORKSHOP), RolePermission(id=2, permission=CONFIRM_ATTENDANCE)])], passwordHash=68512b1486a875e3257d0b5745ea2c7c8c3a6bc01043cd9db7e92688698f5f31f4d1d2a4b99be9de7a67bc871bb122aae0c96020c39d626b34880e306a91efea7de599b274b1904c9ea84ce519adaf27, salt=68512b1486a875e3257d0b5745ea2c7c)
+2024-01-22T21:20:56.900Z DEBUG 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 1043ms
+User(id=2, firstName=Dan, lastName=Admin, email=admin@example.com, roles=[UserRole(id=2, role=ADMIN, permissions=[RolePermission(id=4, permission=ADMIN_UPLOAD), RolePermission(id=3, permission=ADMIN)])], passwordHash=7f41c6979915871174c44ac6d290e084d4d915a6602d5f13171d6f172c7cf4ec918f2f222e18fd9a5272b5a1f5e743cc63d68eb1cda95c3453d89c61a0913b85034b5f83dbb3c95676403cdcd9695518, salt=7f41c6979915871174c44ac6d290e084)
+2024-01-22T21:20:57.670Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 735mscomplexity is too low
+User(id=3, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=3, role=SU, permissions=[RolePermission(id=5, permission=SU)])], passwordHash=37e8807a9da38ba5d62f1fe21a5543639749e172e3a76080a590dc33cf6c2dc8fa2410e612e9f0b8a6834d6f7a8dd2566e11b284ce51bc9c8323cd5a92f0ee8eed0f7de9d8f699917cb28e14293e9bae, salt=37e8807a9da38ba5d62f1fe21a554363)
+2024-01-22T21:20:57.686Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SAVED. Level: Level 3
+2024-01-22T21:20:57.690Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SAVED. Level: Level 5
+Added Levels
+2024-01-22T21:20:57.691Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 3
+2024-01-22T21:20:57.703Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 5
+2024-01-22T21:20:57.715Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Understanding Leadership
+2024-01-22T21:20:57.723Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Building Effective Teams
+2024-01-22T21:20:57.733Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Understanding Stress Management
+2024-01-22T21:20:57.740Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Planning Change in the Workplace
+2024-01-22T21:20:57.746Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Solving Problems & Making Decisions
+2024-01-22T21:20:57.753Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Managing Workplace Projects
+2024-01-22T21:20:57.758Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Becoming an Effective Leader 
+2024-01-22T21:20:57.766Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Leading Innovation & Change
+2024-01-22T21:20:57.772Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Understanding Organisational Culture
+2024-01-22T21:20:57.780Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Managing Stress & Conflict
+Added Workshops
+2024-01-22T21:20:57.790Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: johnwick@aol.com
+2024-01-22T21:20:57.801Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: test1@aol.com
+2024-01-22T21:20:57.808Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: test2@aol.com
+2024-01-22T21:20:57.816Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: danieldavis@aol.com
+2024-01-22T21:20:57.829Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: emilyevans@aol.com
+2024-01-22T21:20:57.840Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: frankfoster@aol.com
+2024-01-22T21:20:57.849Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: gracegarrett@aol.com
+2024-01-22T21:20:57.856Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: henryharrison@aol.com
+2024-01-22T21:20:57.864Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: isabellaisles@aol.com
+2024-01-22T21:20:57.872Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: jamesjohnson@aol.com
+2024-01-22T21:20:57.887Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: katiekenny@aol.com
+2024-01-22T21:20:57.900Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: lauralewis@aol.com
+2024-01-22T21:20:57.911Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: michaelmoore@aol.com
+2024-01-22T21:20:57.919Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: natalienelson@test.com
+2024-01-22T21:20:57.928Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: peterpark@aol.com
+2024-01-22T21:20:57.937Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: robertrussell@aol.com
+2024-01-22T21:20:57.947Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: sarahsmith@aol.com
+2024-01-22T21:20:57.955Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: thomasthompson@aol.com
+2024-01-22T21:20:57.966Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: victoriarwalker@aol.com
+2024-01-22T21:20:57.974Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: williamwilson@aol.com
+2024-01-22T21:20:57.983Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: xavierxavier@aol.com
+2024-01-22T21:20:57.992Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: yasminyoung@aol.com
+2024-01-22T21:20:58.004Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: zachariahzimmerman@aol.com
+2024-01-22T21:20:58.012Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: amandaanderson@test.com
+2024-01-22T21:20:58.021Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: brandonbrown@admiralgroup.co.uk
+2024-01-22T21:20:58.027Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: catherineclark@admiralgroup.co.uk
+2024-01-22T21:20:58.034Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: daviddavis@test.com
+2024-01-22T21:20:58.040Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: emilyevans@test.com
+2024-01-22T21:20:58.046Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: frankfoster@test.com
+2024-01-22T21:20:58.055Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: gracegarrett@test.com
+2024-01-22T21:20:58.064Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: henryharrison@test.com
+2024-01-22T21:20:58.073Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: isabellaives@test.com
+2024-01-22T21:20:58.085Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: jamesjohnson@test.com
+Candidate{id=1, firstName='John', lastName='Wick', dateOfBirth=1970-01-01, payrollNumber=123456, department='IT', role='Security', registrationDate=2023-12-01, registrationNumber=123456, email='johnwick@aol.com', level=null}
+Candidate{id=2, firstName='One', lastName='One0', dateOfBirth=1970-01-01, payrollNumber=234567, department='Claims', role='QA Engineer', registrationDate=2023-12-01, registrationNumber=234567, email='test1@aol.com', level=null}
+Candidate{id=3, firstName='Two', lastName='Two0', dateOfBirth=1970-01-01, payrollNumber=345678, department='IT', role='QA', registrationDate=2023-12-01, registrationNumber=null, email='test2@aol.com', level=null}
+2024-01-22T21:20:58.740Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: test0110@aol.com
+2024-01-22T21:20:58.779Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: babayaga@aol.com
+2024-01-22T21:20:58.795Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: null
+2024-01-22T21:20:58.803Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:20:58.813Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 1
+2024-01-22T21:20:58.822Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 2
+2024-01-22T21:20:58.826Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 3
+2024-01-22T21:20:58.829Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 4
+2024-01-22T21:20:58.832Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 5
+2024-01-22T21:20:58.836Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 6
+2024-01-22T21:20:58.840Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 7
+2024-01-22T21:20:58.843Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 8
+2024-01-22T21:20:58.845Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 9
+2024-01-22T21:20:58.848Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 10
+2024-01-22T21:20:58.853Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 11
+2024-01-22T21:20:58.858Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 12
+2024-01-22T21:20:58.861Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 13
+2024-01-22T21:20:58.863Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 14
+2024-01-22T21:20:58.866Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 15
+2024-01-22T21:20:58.870Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 16
+2024-01-22T21:20:58.873Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 17
+2024-01-22T21:20:58.876Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 18
+2024-01-22T21:20:58.878Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 19
+2024-01-22T21:20:58.881Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 20
+2024-01-22T21:20:58.883Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 21
+2024-01-22T21:20:58.885Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 22
+2024-01-22T21:20:58.886Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 23
+2024-01-22T21:20:58.888Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 24
+2024-01-22T21:20:58.889Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 25
+2024-01-22T21:20:58.893Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 26
+2024-01-22T21:20:58.896Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 27
+2024-01-22T21:20:58.901Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 28
+2024-01-22T21:20:58.906Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 29
+2024-01-22T21:20:58.908Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 30
+2024-01-22T21:20:58.910Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 31
+2024-01-22T21:20:58.913Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 32
+2024-01-22T21:20:58.915Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 33
+2024-01-22T21:20:58.925Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate level enrollment SUCCESS. Candidate: Candidate{id=0, firstName='null', lastName='null', dateOfBirth=null, payrollNumber=0, department='null', role='null', registrationDate=null, registrationNumber=null, email='enrollme@gmail.com', level=Level 1} Level: Level 1
+2024-01-22T21:20:58.934Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:20:58.942Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: johnwick@aol.com
+2024-01-22T21:20:58.950Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: test1@aol.com
+2024-01-22T21:20:58.955Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: test2@aol.com
+2024-01-22T21:20:58.960Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: danieldavis@aol.com
+2024-01-22T21:20:58.963Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: emilyevans@aol.com
+2024-01-22T21:20:58.966Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: frankfoster@aol.com
+2024-01-22T21:20:58.968Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: gracegarrett@aol.com
+2024-01-22T21:20:58.971Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: henryharrison@aol.com
+2024-01-22T21:20:58.973Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: isabellaisles@aol.com
+2024-01-22T21:20:58.975Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: jamesjohnson@aol.com
+2024-01-22T21:20:58.980Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: katiekenny@aol.com
+2024-01-22T21:20:58.981Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: lauralewis@aol.com
+2024-01-22T21:20:58.985Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: michaelmoore@aol.com
+2024-01-22T21:20:58.988Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: natalienelson@test.com
+2024-01-22T21:20:58.991Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: peterpark@aol.com
+2024-01-22T21:20:58.994Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: robertrussell@aol.com
+2024-01-22T21:20:58.997Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: sarahsmith@aol.com
+2024-01-22T21:20:59.001Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: thomasthompson@aol.com
+2024-01-22T21:20:59.005Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: victoriarwalker@aol.com
+2024-01-22T21:20:59.007Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: williamwilson@aol.com
+2024-01-22T21:20:59.010Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: xavierxavier@aol.com
+2024-01-22T21:20:59.013Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: yasminyoung@aol.com
+2024-01-22T21:20:59.015Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: zachariahzimmerman@aol.com
+2024-01-22T21:20:59.016Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: amandaanderson@test.com
+2024-01-22T21:20:59.018Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: brandonbrown@admiralgroup.co.uk
+2024-01-22T21:20:59.022Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: catherineclark@admiralgroup.co.uk
+2024-01-22T21:20:59.024Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: daviddavis@test.com
+2024-01-22T21:20:59.026Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: emilyevans@test.com
+2024-01-22T21:20:59.028Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: frankfoster@test.com
+2024-01-22T21:20:59.030Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: gracegarrett@test.com
+2024-01-22T21:20:59.032Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: henryharrison@test.com
+2024-01-22T21:20:59.033Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: isabellaives@test.com
+2024-01-22T21:20:59.035Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Email: jamesjohnson@test.com
+2024-01-22T21:20:59.041Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:20:59.048Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: zachzacharythethird3713@aol.com
+2024-01-22T21:20:59.050Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:20:59.061Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: babayaga@aol.com
+2024-01-22T21:20:59.071Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate level enrollment SUCCESS. Candidate: Candidate{id=0, firstName='null', lastName='null', dateOfBirth=null, payrollNumber=0, department='null', role='null', registrationDate=null, registrationNumber=null, email='alreadyenrolled@gmail.com', level=Level 1} Level: Level 1
+2024-01-22T21:20:59.073Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : Candidate level enrollment UNSUCCESSFUL. Candidate: Candidate{id=40, firstName='null', lastName='null', dateOfBirth=null, payrollNumber=0, department='null', role='null', registrationDate=null, registrationNumber=null, email='alreadyenrolled@gmail.com', level=Level 1} Level: Level 1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

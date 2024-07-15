@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-01-22T21:21:41" hostname="DSA10F60A8A6F79" time="11.475">
+  <properties/>
+  <testcase name="getLevelToString()" classname="uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests" time="0.012"/>
+  <testcase name="getLevelById()" classname="uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests" time="0.006"/>
+  <testcase name="getLevelByInteger()" classname="uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests" time="0.008"/>
+  <testcase name="getAllLevels()" classname="uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests" time="0.015"/>
+  <testcase name="getAllWorkshops()" classname="uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests" time="0.022"/>
+  <testcase name="getAllWorkshopsByLevel()" classname="uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests" time="0.017"/>
+  <testcase name="addWorkshopToExistingLevel()" classname="uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests" time="0.013"/>
+  <testcase name="getWorkshopToString()" classname="uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests" time="0.009"/>
+  <testcase name="existingLevelWontAdd()" classname="uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests" time="0.014"/>
+  <system-out><![CDATA[2024-01-22T21:21:40.074Z  INFO 10856 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests]: ProjectServiceImplTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-22T21:21:40.078Z  INFO 10856 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration uk.ac.cardiff.phoenix.ilm.IlmApplication for test class uk.ac.cardiff.phoenix.ilm.ProjectServiceImplTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:21:40.097Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Starting ProjectServiceImplTests using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:21:40.098Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : The following 1 profile is active: "test"
+2024-01-22T21:21:40.330Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:21:40.398Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:21:40.417Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:21:40.433Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:11e1d5bd-fa2f-4f07-9307-13202cdd598c;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:21:40.452Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:21:40.463Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:21:40.465Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:21:40.467Z  WARN 10856 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-22T21:21:40.493Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:21:40.494Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:21:40.494Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:21:40.494Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:21:40.494Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:21:40.494Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:21:40.494Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:21:40.494Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:21:40.495Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:21:40.582Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:21:40.595Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:21:40.745Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:21:40.757Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:21:40.770Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7b8ecfd0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@400dacd3, org.springframework.security.web.context.SecurityContextHolderFilter@6a42b57c, org.springframework.security.web.header.HeaderWriterFilter@113d948f, org.springframework.security.web.csrf.CsrfFilter@78c01dbf, org.springframework.security.web.authentication.logout.LogoutFilter@52ec2a56, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1db5a911, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1297706e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@509eeca0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e209dae, org.springframework.security.web.access.ExceptionTranslationFilter@4a210d59, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f643af6]
+2024-01-22T21:21:40.880Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Started ProjectServiceImplTests in 0.799 seconds (process running for 56.759)
+2024-01-22T21:21:41.673Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 754mscomplexity is too low
+User(id=1, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=1, role=SU, permissions=[RolePermission(id=1, permission=SU)])], passwordHash=505b0768378506ac9edd0f28436cf0e672210be11637e8e30f52d3be54eed5160c26195923417603d7c9ae07481ca44e233220083d357e849aa773543f06805fd3447d5b86269361aa79ab1a0904c73a, salt=505b0768378506ac9edd0f28436cf0e6)
+2024-01-22T21:21:41.684Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 6
+2024-01-22T21:21:41.684Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level ID: 1
+2024-01-22T21:21:41.690Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:21:41.724Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Starting ProjectServiceImplTests using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:21:41.724Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : The following 1 profile is active: "test"
+2024-01-22T21:21:42.021Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:21:42.079Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:21:42.092Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:21:42.105Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:d565de58-4112-42b0-a66b-b5ea2432cd5c;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:21:42.122Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:21:42.131Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:21:42.134Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:21:42.136Z  WARN 10856 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-22T21:21:42.156Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:21:42.156Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:21:42.156Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:21:42.156Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:21:42.156Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:21:42.157Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:21:42.157Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:21:42.157Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:21:42.157Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:21:42.238Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:21:42.266Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:21:42.367Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:21:42.373Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:21:42.382Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6f4a6c56, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f5bbb45, org.springframework.security.web.context.SecurityContextHolderFilter@6b7b3d77, org.springframework.security.web.header.HeaderWriterFilter@4995ca37, org.springframework.security.web.csrf.CsrfFilter@77b71acd, org.springframework.security.web.authentication.logout.LogoutFilter@3994d744, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@30172b56, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24d533a7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c957807, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74723d09, org.springframework.security.web.access.ExceptionTranslationFilter@71f72ffd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6dfec99e]
+2024-01-22T21:21:42.471Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Started ProjectServiceImplTests in 0.777 seconds (process running for 58.35)
+2024-01-22T21:21:43.191Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 700mscomplexity is too low
+User(id=1, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=1, role=SU, permissions=[RolePermission(id=1, permission=SU)])], passwordHash=f73519f857ba9649b0453e6b0c66751b797b600e29ae16fbf1e347dcef14c6f7acb6818968af06c4fc5ae2445efa4df79502500a53f1e2874f6c4da0e43aeadd5016fad51a6d6b07b12d71fa5f3f97f6, salt=f73519f857ba9649b0453e6b0c66751b)
+2024-01-22T21:21:43.204Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 6
+2024-01-22T21:21:43.205Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level ID: 1
+2024-01-22T21:21:43.207Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:21:43.232Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Starting ProjectServiceImplTests using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:21:43.232Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : The following 1 profile is active: "test"
+2024-01-22T21:21:43.472Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:21:43.553Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:21:43.574Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:21:43.596Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:53ee1964-2071-478d-828a-8da9260d78b3;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:21:43.636Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:21:43.646Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:21:43.649Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:21:43.652Z  WARN 10856 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-22T21:21:43.683Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:21:43.683Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:21:43.683Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:21:43.683Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:21:43.684Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:21:43.684Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:21:43.684Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:21:43.684Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:21:43.684Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:21:43.773Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:21:43.789Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:21:43.895Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:21:43.906Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:21:43.918Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@46823e4a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36a750d4, org.springframework.security.web.context.SecurityContextHolderFilter@484e7698, org.springframework.security.web.header.HeaderWriterFilter@7b14cac6, org.springframework.security.web.csrf.CsrfFilter@288af9bf, org.springframework.security.web.authentication.logout.LogoutFilter@584dfeda, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@794efcf3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37f6292f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e93117b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1202c1ee, org.springframework.security.web.access.ExceptionTranslationFilter@55fb92f8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1236d6f8]
+2024-01-22T21:21:43.973Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Started ProjectServiceImplTests in 0.761 seconds (process running for 59.851)
+2024-01-22T21:21:44.617Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 633mscomplexity is too low
+User(id=1, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=1, role=SU, permissions=[RolePermission(id=1, permission=SU)])], passwordHash=b2b3cb5a01a5414d22d41c128144488a6037a3731050a06c3d820550a1a92f9ad796157ac6adaa4201e5832ee26914dd809df7ed4a53e5d7d07a70ac970783fda7eaa3611b1ac6f46719c500eb0eeaf7, salt=b2b3cb5a01a5414d22d41c128144488a)
+2024-01-22T21:21:44.628Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 6
+2024-01-22T21:21:44.628Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 6
+2024-01-22T21:21:44.630Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:21:44.667Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Starting ProjectServiceImplTests using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:21:44.668Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : The following 1 profile is active: "test"
+2024-01-22T21:21:44.911Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:21:44.981Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:21:45.001Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:21:45.023Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:77f0b53e-6b64-416d-871a-cba7027477ff;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:21:45.032Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:21:45.040Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:21:45.042Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:21:45.043Z  WARN 10856 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-22T21:21:45.057Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:21:45.057Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:21:45.057Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:21:45.057Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:21:45.057Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:21:45.057Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:21:45.057Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:21:45.057Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:21:45.057Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:21:45.125Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:21:45.141Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:21:45.219Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:21:45.229Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:21:45.238Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3c4988e1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@733f5bf4, org.springframework.security.web.context.SecurityContextHolderFilter@37a66e55, org.springframework.security.web.header.HeaderWriterFilter@29881522, org.springframework.security.web.csrf.CsrfFilter@1177e2c4, org.springframework.security.web.authentication.logout.LogoutFilter@5505c6a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@51d4f2c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19e9cba7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68c867f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f1a373d, org.springframework.security.web.access.ExceptionTranslationFilter@36a8ef12, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ba6f3f5]
+2024-01-22T21:21:45.325Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Started ProjectServiceImplTests in 0.69 seconds (process running for 61.204)
+2024-01-22T21:21:45.988Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 647mscomplexity is too low
+User(id=1, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=1, role=SU, permissions=[RolePermission(id=1, permission=SU)])], passwordHash=f64f8dbdaca6943cae1e1559a41c3ee5a94fbecaa70d185e2035bf2fed3a157d87c6d3b3d567af595fab2ae966441cad897683f3d4764ced0df3636d32c7a3b1a354e2cf92392699b19e24e9acde6902, salt=f64f8dbdaca6943cae1e1559a41c3ee5)
+2024-01-22T21:21:46.004Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 1
+2024-01-22T21:21:46.007Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 2
+2024-01-22T21:21:46.007Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 3
+2024-01-22T21:21:46.008Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 4
+2024-01-22T21:21:46.008Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 5
+2024-01-22T21:21:46.008Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 6
+2024-01-22T21:21:46.008Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:21:46.013Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:21:46.054Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Starting ProjectServiceImplTests using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:21:46.054Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : The following 1 profile is active: "test"
+2024-01-22T21:21:46.302Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:21:46.357Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:21:46.373Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:21:46.400Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:acd73382-07c9-460d-b691-efe64cd21362;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:21:46.412Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:21:46.421Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:21:46.423Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:21:46.424Z  WARN 10856 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-22T21:21:46.445Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:21:46.445Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:21:46.445Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:21:46.445Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:21:46.445Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:21:46.445Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:21:46.445Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:21:46.445Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:21:46.446Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:21:46.532Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:21:46.551Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:21:46.633Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:21:46.648Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:21:46.664Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3cf4ce2f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ef51c9c, org.springframework.security.web.context.SecurityContextHolderFilter@34067e25, org.springframework.security.web.header.HeaderWriterFilter@151ff368, org.springframework.security.web.csrf.CsrfFilter@7a294c74, org.springframework.security.web.authentication.logout.LogoutFilter@cf4d1ca, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7cc722c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fcce3d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61ea5a2f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@214ef1e6, org.springframework.security.web.access.ExceptionTranslationFilter@44c37ea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5bd49206]
+2024-01-22T21:21:46.753Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Started ProjectServiceImplTests in 0.727 seconds (process running for 62.631)
+2024-01-22T21:21:47.401Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 637mscomplexity is too low
+User(id=1, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=1, role=SU, permissions=[RolePermission(id=1, permission=SU)])], passwordHash=8f3bbac24094b03f6c45700239a415aab0c1fa2feae55c4ed08d40f0d2d87536c8fda53e9f3f99773ef2c9d5c1dca025d955b42259d65e170b364b128c916761d8930993bc5fa95dca36e7f08f6f7d84, salt=8f3bbac24094b03f6c45700239a415aa)
+2024-01-22T21:21:47.412Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 1
+2024-01-22T21:21:47.412Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 2
+2024-01-22T21:21:47.412Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 1
+2024-01-22T21:21:47.416Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 1
+2024-01-22T21:21:47.416Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 1
+2024-01-22T21:21:47.419Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 2
+2024-01-22T21:21:47.419Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 1
+2024-01-22T21:21:47.422Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 3
+2024-01-22T21:21:47.422Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 2
+2024-01-22T21:21:47.424Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 4
+2024-01-22T21:21:47.425Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 2
+2024-01-22T21:21:47.427Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 5
+2024-01-22T21:21:47.427Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 2
+2024-01-22T21:21:47.428Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 6
+2024-01-22T21:21:47.428Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:21:47.431Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:21:47.452Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Starting ProjectServiceImplTests using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:21:47.452Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : The following 1 profile is active: "test"
+2024-01-22T21:21:47.763Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:21:47.816Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:21:47.829Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:21:47.874Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:bdc3bcbb-74a6-4875-9a3d-491060cfa237;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:21:47.892Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:21:47.902Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:21:47.904Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:21:47.905Z  WARN 10856 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-22T21:21:47.922Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:21:47.922Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:21:47.922Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:21:47.922Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:21:47.922Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:21:47.922Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:21:47.922Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:21:47.922Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:21:47.922Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:21:48.003Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:21:48.014Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:21:48.124Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:21:48.139Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:21:48.153Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e13e874, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5947f23e, org.springframework.security.web.context.SecurityContextHolderFilter@b2e15f2, org.springframework.security.web.header.HeaderWriterFilter@5d19197a, org.springframework.security.web.csrf.CsrfFilter@705c03f2, org.springframework.security.web.authentication.logout.LogoutFilter@70cb8953, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@c10d05b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b7dd4f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ef6843f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c35721a, org.springframework.security.web.access.ExceptionTranslationFilter@da115eb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b25dc50]
+2024-01-22T21:21:48.232Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Started ProjectServiceImplTests in 0.797 seconds (process running for 64.111)
+2024-01-22T21:21:48.948Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 697mscomplexity is too low
+User(id=1, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=1, role=SU, permissions=[RolePermission(id=1, permission=SU)])], passwordHash=3a839bb574284825c4e34eb7d7699012e15507b92135cc66661ce41feba4e5ee07b3bfbaa4390c633aa1eb51e8caba9fab5e6f5f895982b2aadc69e9a06c2bbf82e89b9059a3dd5ba82284fb45da6230, salt=3a839bb574284825c4e34eb7d7699012)
+2024-01-22T21:21:48.955Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 1
+2024-01-22T21:21:48.956Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 2
+2024-01-22T21:21:48.956Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 1
+2024-01-22T21:21:48.958Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 1
+2024-01-22T21:21:48.958Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 1
+2024-01-22T21:21:48.960Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 2
+2024-01-22T21:21:48.960Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 1
+2024-01-22T21:21:48.962Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 3
+2024-01-22T21:21:48.962Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 2
+2024-01-22T21:21:48.962Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 4
+2024-01-22T21:21:48.962Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 2
+2024-01-22T21:21:48.964Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 5
+2024-01-22T21:21:48.964Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 2
+2024-01-22T21:21:48.965Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 6
+2024-01-22T21:21:48.965Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH. Level number: 2
+2024-01-22T21:21:48.968Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:21:48.995Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Starting ProjectServiceImplTests using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:21:48.995Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : The following 1 profile is active: "test"
+2024-01-22T21:21:49.255Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:21:49.306Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:21:49.321Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:21:49.331Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:8d945e68-8611-4150-b3de-db4c2ae81e47;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:21:49.347Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:21:49.361Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:21:49.362Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:21:49.363Z  WARN 10856 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-22T21:21:49.385Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:21:49.385Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:21:49.386Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:21:49.386Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:21:49.386Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:21:49.386Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:21:49.386Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:21:49.386Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:21:49.386Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:21:49.477Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:21:49.488Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:21:49.580Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:21:49.584Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:21:49.593Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4ec56dde, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a5503e3, org.springframework.security.web.context.SecurityContextHolderFilter@38f16a58, org.springframework.security.web.header.HeaderWriterFilter@6da71d8a, org.springframework.security.web.csrf.CsrfFilter@14dfdfc2, org.springframework.security.web.authentication.logout.LogoutFilter@1969534c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@46efba22, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52ba834b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f6756da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f984f7b, org.springframework.security.web.access.ExceptionTranslationFilter@56cf67e9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d170de7]
+2024-01-22T21:21:49.664Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Started ProjectServiceImplTests in 0.693 seconds (process running for 65.544)
+2024-01-22T21:21:50.351Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 674mscomplexity is too low
+User(id=1, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=1, role=SU, permissions=[RolePermission(id=1, permission=SU)])], passwordHash=e474d888b85ca68c62cc67ad0c4af3ffd47963d075032dba8259c6f84f81f9ac92de162e28fd1eacbac5390ce087c5589a747b29a5db10832a2210b20dcea5ec1ec68cc1e7fe0049f42e84a8ee83c2d1, salt=e474d888b85ca68c62cc67ad0c4af3ff)
+2024-01-22T21:21:50.367Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 6
+2024-01-22T21:21:50.367Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 6
+2024-01-22T21:21:50.369Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 1
+2024-01-22T21:21:50.369Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH. Workshop ID: 1
+2024-01-22T21:21:50.372Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:21:50.403Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Starting ProjectServiceImplTests using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:21:50.403Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : The following 1 profile is active: "test"
+2024-01-22T21:21:50.687Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:21:50.751Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:21:50.767Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:21:50.775Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:e92084f7-aa15-475a-95ee-918327ed2ce2;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:21:50.803Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:21:50.821Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:21:50.825Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:21:50.827Z  WARN 10856 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-22T21:21:50.841Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:21:50.842Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:21:50.842Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:21:50.842Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:21:50.847Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:21:50.847Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:21:50.847Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:21:50.847Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:21:50.847Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:21:50.906Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:21:50.914Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:21:50.990Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:21:50.997Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:21:51.005Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4585505f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@196d0ee, org.springframework.security.web.context.SecurityContextHolderFilter@17338ff8, org.springframework.security.web.header.HeaderWriterFilter@1e0a629b, org.springframework.security.web.csrf.CsrfFilter@53ebfba2, org.springframework.security.web.authentication.logout.LogoutFilter@6bfdc848, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@9a7bc11, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b095057, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2de97664, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1220be23, org.springframework.security.web.access.ExceptionTranslationFilter@4d8f7b21, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@747cfb24]
+2024-01-22T21:21:51.087Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Started ProjectServiceImplTests in 0.708 seconds (process running for 66.966)
+2024-01-22T21:21:51.750Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 647mscomplexity is too low
+User(id=1, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=1, role=SU, permissions=[RolePermission(id=1, permission=SU)])], passwordHash=5f01002f01780fa3464a9599cb56adeb26331332afd45d0e5ad0ce712b346ca0ee42babc2738be8381bdbd129e04ce7ce84dc3c9111e961e9ada1e3508fe9ecd321027cd134ca240a18ccb83a0120f5b, salt=5f01002f01780fa3464a9599cb56adeb)
+2024-01-22T21:21:51.757Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 6
+2024-01-22T21:21:51.757Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 6
+2024-01-22T21:21:51.761Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Workshop 1
+2024-01-22T21:21:51.761Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH. Workshop ID: 1
+2024-01-22T21:21:51.764Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:21:51.782Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Starting ProjectServiceImplTests using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:21:51.782Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : The following 1 profile is active: "test"
+2024-01-22T21:21:52.007Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:21:52.072Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:21:52.087Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:21:52.103Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:f060a0f4-eff5-4d86-a941-b55a5fd51b32;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:21:52.124Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:21:52.135Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:21:52.139Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:21:52.141Z  WARN 10856 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-22T21:21:52.159Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:21:52.159Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:21:52.159Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:21:52.159Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:21:52.160Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:21:52.160Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:21:52.160Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:21:52.160Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:21:52.160Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:21:52.224Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:21:52.243Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:21:52.339Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:21:52.349Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:21:52.355Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@29395ae2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f1ee337, org.springframework.security.web.context.SecurityContextHolderFilter@5585c868, org.springframework.security.web.header.HeaderWriterFilter@1ba8315e, org.springframework.security.web.csrf.CsrfFilter@618aa4bd, org.springframework.security.web.authentication.logout.LogoutFilter@54b983ad, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@485d6a85, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@619e3129, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75fc259d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c9399b, org.springframework.security.web.access.ExceptionTranslationFilter@1d4126e9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56576db2]
+2024-01-22T21:21:52.452Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.ProjectServiceImplTests      : Started ProjectServiceImplTests in 0.685 seconds (process running for 68.331)
+2024-01-22T21:21:53.137Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 668mscomplexity is too low
+User(id=1, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=1, role=SU, permissions=[RolePermission(id=1, permission=SU)])], passwordHash=b238c4f0f5e68841e6dc111079529b241da194e78f149bee0d224beb48a437fa320619dde92641bfd82eb223a69622af785613a3e64255528b3bee5c53acce11c09212496022ff51503d1b6d87e082ef, salt=b238c4f0f5e68841e6dc111079529b24)
+2024-01-22T21:21:53.145Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVED. Level: 1
+2024-01-22T21:21:53.147Z  WARN 10856 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2024-01-22T21:21:53.147Z ERROR 10856 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_4 ON PUBLIC.LEVEL(LEVEL_NUMBER NULLS FIRST) VALUES ( /* 1 */ 1 )"; SQL statement:
+insert into level (level_description,level_name,level_number,level_id) values (?,?,?,default) [23505-214]
+2024-01-22T21:21:53.153Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : New Level SAVE UNSUCCESSFUL. Already exists. Level: 1
+2024-01-22T21:21:53.156Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

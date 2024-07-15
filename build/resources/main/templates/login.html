@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{base-template :: headFragment(${title_insert})}">
+    <title>Default Title</title>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav th:replace="~{base-template :: navbar}"></nav>
+
+<div th:if="${param.error}" class="alert alert-warning">
+    <strong>Error:</strong> Invalid username and password.
+</div>
+
+<div th:if="${param.logout}" class="alert alert-info">
+    <strong>Success:</strong> You have been logged out.
+</div>
+<div class="container mt-3">
+    <form method="post" th:action="@{/login}" class="row g-3">
+        <div class="col-8">
+            <label for="username" class="form-label">User Name:</label>
+            <input name="username" type="text" class="form-control" id="username" />
+        </div>
+        <div class="col-8">
+            <label for="password" class="form-label">Password:</label>
+            <input name="password" type="password" class="form-control" id="password" />
+        </div>
+        <div class="col-12">
+            <input type="submit" value="Sign In" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+<!-- Bootstrap scripts -->
+<div th:replace="~{base-template :: bootstrap-scripts}"></div>
+</body>
+
+</html>

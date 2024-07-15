@@ -4,8 +4,7 @@ How to run
 
 Requires Java 17
 
-Make sure you have a mariadb running with an empty ILM schema
-(run the sql in src/main/resources/schema.sql)
+Make sure you have a mariadb running with an empty ILM schema ("CREATE DATABASE ILM; commit;")
 
 Set an environmental password for the database
 DB_PASSWORD={your password}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.ac.cardiff.phoenix.ilm.reportTests.TestCandidateReport" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-22T21:22:07" hostname="DSA10F60A8A6F79" time="0.382">
+  <properties/>
+  <testcase name="testCandidateReport()" classname="uk.ac.cardiff.phoenix.ilm.reportTests.TestCandidateReport" time="0.382"/>
+  <system-out><![CDATA[2024-01-22T21:22:02.723Z  INFO 10856 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [uk.ac.cardiff.phoenix.ilm.reportTests.TestCandidateReport]: TestCandidateReport does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-22T21:22:02.749Z  INFO 10856 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration uk.ac.cardiff.phoenix.ilm.IlmApplication for test class uk.ac.cardiff.phoenix.ilm.reportTests.TestCandidateReport
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:22:02.816Z  INFO 10856 --- [    Test worker] u.a.c.p.i.r.TestCandidateReport          : Starting TestCandidateReport using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:22:02.817Z DEBUG 10856 --- [    Test worker] u.a.c.p.i.r.TestCandidateReport          : Running with Spring Boot v3.1.5, Spring v6.0.13
+2024-01-22T21:22:02.818Z  INFO 10856 --- [    Test worker] u.a.c.p.i.r.TestCandidateReport          : The following 1 profile is active: "dev"
+2024-01-22T21:22:03.258Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:22:03.365Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:22:03.407Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:22:03.440Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:6b926eb5-8ec4-4418-8d73-eaa89226e037;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:22:03.463Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:22:03.478Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:22:03.484Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:22:03.539Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:22:03.540Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:22:03.541Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:22:03.541Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:22:03.541Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:22:03.542Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:22:03.542Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:22:03.542Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:22:03.542Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:22:03.704Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:22:03.741Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:22:03.996Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:22:04.010Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:22:04.025Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c4686f0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58ac0ab9, org.springframework.security.web.context.SecurityContextHolderFilter@60c67a9b, org.springframework.security.web.header.HeaderWriterFilter@6e97f62a, org.springframework.security.web.csrf.CsrfFilter@d88da41, org.springframework.security.web.authentication.logout.LogoutFilter@50a5b9b5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@499da924, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bd7ee10, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5293933e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50ec4e78, org.springframework.security.web.access.ExceptionTranslationFilter@7751dd81, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38360fc3]
+2024-01-22T21:22:04.168Z  INFO 10856 --- [    Test worker] u.a.c.p.i.r.TestCandidateReport          : Started TestCandidateReport in 1.414 seconds (process running for 80.046)
+2024-01-22T21:22:05.164Z DEBUG 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 949ms
+User(id=1, firstName=John, lastName=Tutor, email=john.tutor@example.com, roles=[UserRole(id=1, role=TUTOR, permissions=[RolePermission(id=1, permission=SCHEDULE_WORKSHOP), RolePermission(id=2, permission=CONFIRM_ATTENDANCE)])], passwordHash=b314eb6614917b74a7b44c783b02ecf0cc4726806b5ec413b3c51f8e2cdecb6ff64be8d7e9c99c9759229947e72cf7e7cebce1d70d2ff9edb60201542118df8a11949627ab64672ec2a8cce09a05d8cc, salt=b314eb6614917b74a7b44c783b02ecf0)
+2024-01-22T21:22:06.228Z DEBUG 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 1004ms
+User(id=2, firstName=Dan, lastName=Admin, email=admin@example.com, roles=[UserRole(id=2, role=ADMIN, permissions=[RolePermission(id=4, permission=ADMIN_UPLOAD), RolePermission(id=3, permission=ADMIN)])], passwordHash=9035096268e6cbbcc62ab916aa69e7ca07b4d6e9ef2b1b764b5da61091468580ae6d6e06a066626e0a90be76d8f91b2316dc969c36dd8eb17bf2280adf358ef846e6e695db061fcb91a1d4e100765faf, salt=9035096268e6cbbcc62ab916aa69e7ca)
+2024-01-22T21:22:07.483Z DEBUG 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 1205ms
+User(id=3, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=3, role=SU, permissions=[RolePermission(id=5, permission=SU)])], passwordHash=6f77c59d2336b40cf06ac093815bfba3e0f982c90217d09bb5b1a6caa239848f062622ce168120f6031c2a87fca7e6ca76a46992b4e9e63f0f679e96630c2d01d3184c60d2f49271f7b20eeaa57f10b8, salt=6f77c59d2336b40cf06ac093815bfba3)
+2024-01-22T21:22:07.502Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SAVED. Level: Level 3
+2024-01-22T21:22:07.507Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SAVED. Level: Level 5
+Added Levels
+2024-01-22T21:22:07.508Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 3
+2024-01-22T21:22:07.513Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 5
+2024-01-22T21:22:07.528Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Understanding Leadership
+2024-01-22T21:22:07.534Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Building Effective Teams
+2024-01-22T21:22:07.544Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Understanding Stress Management
+2024-01-22T21:22:07.552Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Planning Change in the Workplace
+2024-01-22T21:22:07.561Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Solving Problems & Making Decisions
+2024-01-22T21:22:07.570Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Managing Workplace Projects
+2024-01-22T21:22:07.579Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Becoming an Effective Leader 
+2024-01-22T21:22:07.585Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Leading Innovation & Change
+2024-01-22T21:22:07.591Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Understanding Organisational Culture
+2024-01-22T21:22:07.605Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Managing Stress & Conflict
+Added Workshops
+2024-01-22T21:22:07.618Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: johnwick@aol.com
+2024-01-22T21:22:07.639Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: test1@aol.com
+2024-01-22T21:22:07.657Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: test2@aol.com
+2024-01-22T21:22:07.668Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: danieldavis@aol.com
+2024-01-22T21:22:07.676Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: emilyevans@aol.com
+2024-01-22T21:22:07.688Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: frankfoster@aol.com
+2024-01-22T21:22:07.697Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: gracegarrett@aol.com
+2024-01-22T21:22:07.707Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: henryharrison@aol.com
+2024-01-22T21:22:07.715Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: isabellaisles@aol.com
+2024-01-22T21:22:07.725Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: jamesjohnson@aol.com
+2024-01-22T21:22:07.734Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: katiekenny@aol.com
+2024-01-22T21:22:07.745Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: lauralewis@aol.com
+2024-01-22T21:22:07.751Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: michaelmoore@aol.com
+2024-01-22T21:22:07.764Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: natalienelson@test.com
+2024-01-22T21:22:07.772Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: peterpark@aol.com
+2024-01-22T21:22:07.780Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: robertrussell@aol.com
+2024-01-22T21:22:07.791Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: sarahsmith@aol.com
+2024-01-22T21:22:07.800Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: thomasthompson@aol.com
+2024-01-22T21:22:07.810Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: victoriarwalker@aol.com
+2024-01-22T21:22:07.815Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: williamwilson@aol.com
+2024-01-22T21:22:07.828Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: xavierxavier@aol.com
+2024-01-22T21:22:07.837Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: yasminyoung@aol.com
+2024-01-22T21:22:07.846Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: zachariahzimmerman@aol.com
+2024-01-22T21:22:07.856Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: amandaanderson@test.com
+2024-01-22T21:22:07.868Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: brandonbrown@admiralgroup.co.uk
+2024-01-22T21:22:07.883Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: catherineclark@admiralgroup.co.uk
+2024-01-22T21:22:07.895Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: daviddavis@test.com
+2024-01-22T21:22:07.906Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: emilyevans@test.com
+2024-01-22T21:22:07.918Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: frankfoster@test.com
+2024-01-22T21:22:07.926Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: gracegarrett@test.com
+2024-01-22T21:22:07.933Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: henryharrison@test.com
+2024-01-22T21:22:07.944Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: isabellaives@test.com
+2024-01-22T21:22:07.950Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: jamesjohnson@test.com
+Candidate{id=1, firstName='John', lastName='Wick', dateOfBirth=1970-01-01, payrollNumber=123456, department='IT', role='Security', registrationDate=2023-12-01, registrationNumber=123456, email='johnwick@aol.com', level=null}
+Candidate{id=2, firstName='One', lastName='One0', dateOfBirth=1970-01-01, payrollNumber=234567, department='Claims', role='QA Engineer', registrationDate=2023-12-01, registrationNumber=234567, email='test1@aol.com', level=null}
+Candidate{id=3, firstName='Two', lastName='Two0', dateOfBirth=1970-01-01, payrollNumber=345678, department='IT', role='QA', registrationDate=2023-12-01, registrationNumber=null, email='test2@aol.com', level=null}
+2024-01-22T21:22:08.341Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

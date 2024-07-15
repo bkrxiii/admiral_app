@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.ac.cardiff.phoenix.ilm.ExcelProcessor.ExcelTypeDetectorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-22T21:22:02" hostname="DSA10F60A8A6F79" time="0.078">
+  <properties/>
+  <testcase name="testDetectUnknownExcelType()" classname="uk.ac.cardiff.phoenix.ilm.ExcelProcessor.ExcelTypeDetectorTest" time="0.029"/>
+  <testcase name="testDetectExcelTypeWithCandidateData()" classname="uk.ac.cardiff.phoenix.ilm.ExcelProcessor.ExcelTypeDetectorTest" time="0.048"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

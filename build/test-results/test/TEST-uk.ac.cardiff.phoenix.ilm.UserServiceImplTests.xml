@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.ac.cardiff.phoenix.ilm.UserServiceImplTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-01-22T21:21:55" hostname="DSA10F60A8A6F79" time="6.317">
+  <properties/>
+  <testcase name="incorrectEmailDoesNotAuthenticate()" classname="uk.ac.cardiff.phoenix.ilm.UserServiceImplTests" time="2.489"/>
+  <testcase name="saltedPasswordAuthenticates()" classname="uk.ac.cardiff.phoenix.ilm.UserServiceImplTests" time="1.932"/>
+  <testcase name="incorrectPasswordDoesNotAuthenticate()" classname="uk.ac.cardiff.phoenix.ilm.UserServiceImplTests" time="1.892"/>
+  <system-out><![CDATA[2024-01-22T21:21:55.116Z  INFO 10856 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [uk.ac.cardiff.phoenix.ilm.UserServiceImplTests]: UserServiceImplTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-22T21:21:55.123Z  INFO 10856 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration uk.ac.cardiff.phoenix.ilm.IlmApplication for test class uk.ac.cardiff.phoenix.ilm.UserServiceImplTests
+2024-01-22T21:21:57.605Z DEBUG 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 2456ms
+2024-01-22T21:21:58.543Z DEBUG 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 914ms
+2024-01-22T21:21:59.548Z DEBUG 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 970ms
+2024-01-22T21:22:00.530Z DEBUG 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 963ms
+2024-01-22T21:22:01.444Z DEBUG 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 904ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

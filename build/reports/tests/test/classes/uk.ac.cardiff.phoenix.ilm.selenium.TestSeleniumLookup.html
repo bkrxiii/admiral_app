@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TestSeleniumLookup</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TestSeleniumLookup</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/uk.ac.cardiff.phoenix.ilm.selenium.html">uk.ac.cardiff.phoenix.ilm.selenium</a> &gt; TestSeleniumLookup</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">4.877s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testLookUpSelenium()</td>
+<td class="success">4.877s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-01-22T21:23:21.134Z  INFO 10856 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [uk.ac.cardiff.phoenix.ilm.selenium.TestSeleniumLookup]: TestSeleniumLookup does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-22T21:23:21.138Z  INFO 10856 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration uk.ac.cardiff.phoenix.ilm.IlmApplication for test class uk.ac.cardiff.phoenix.ilm.selenium.TestSeleniumLookup
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2024-01-22T21:23:21.165Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.selenium.TestSeleniumLookup  : Starting TestSeleniumLookup using Java 17.0.6 with PID 10856 (started by c22123521 in C:\Users\c22123521\Projects\year-2-team-phoenix-22123521)
+2024-01-22T21:23:21.165Z DEBUG 10856 --- [    Test worker] u.a.c.p.ilm.selenium.TestSeleniumLookup  : Running with Spring Boot v3.1.5, Spring v6.0.13
+2024-01-22T21:23:21.165Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.selenium.TestSeleniumLookup  : The following 1 profile is active: &quot;dev&quot;
+2024-01-22T21:23:21.406Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-22T21:23:21.461Z  INFO 10856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 9 JPA repository interfaces.
+2024-01-22T21:23:21.476Z  INFO 10856 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-01-22T21:23:21.507Z  INFO 10856 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-01-22T21:23:21.508Z  INFO 10856 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-22T21:23:21.508Z  INFO 10856 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-22T21:23:21.537Z  INFO 10856 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-22T21:23:21.537Z  INFO 10856 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 370 ms
+2024-01-22T21:23:21.543Z  INFO 10856 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:dfc2607d-2d37-4a5e-90b0-adb1a268420c;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-01-22T21:23:21.554Z  INFO 10856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-22T21:23:21.568Z  INFO 10856 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-01-22T21:23:21.572Z  INFO 10856 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-22T21:23:21.591Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.UserRole
+2024-01-22T21:23:21.591Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Workshop
+2024-01-22T21:23:21.591Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Homework
+2024-01-22T21:23:21.591Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.User
+2024-01-22T21:23:21.592Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Level
+2024-01-22T21:23:21.592Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.UploadedFile
+2024-01-22T21:23:21.592Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.model.Candidate
+2024-01-22T21:23:21.592Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.programs.model.Event
+2024-01-22T21:23:21.592Z  INFO 10856 --- [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: uk.ac.cardiff.phoenix.ilm.users.model.RolePermission
+2024-01-22T21:23:21.671Z  INFO 10856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-22T21:23:21.682Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-22T21:23:21.755Z  INFO 10856 --- [    Test worker] u.a.c.p.i.u.s.RolePermissionServiceImpl  : Access DENIED handler invoked
+2024-01-22T21:23:21.763Z  WARN 10856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-22T21:23:21.799Z  INFO 10856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2ac80dc4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c7ed38e, org.springframework.security.web.context.SecurityContextHolderFilter@21a4b859, org.springframework.security.web.header.HeaderWriterFilter@24ec32e7, org.springframework.security.web.csrf.CsrfFilter@4e8affb8, org.springframework.security.web.authentication.logout.LogoutFilter@7ca7650, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e5fdc3f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@384ae4ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46161933, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59fef592, org.springframework.security.web.access.ExceptionTranslationFilter@6ae29808, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6206fa61]
+2024-01-22T21:23:21.835Z  INFO 10856 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55678 (http) with context path ''
+2024-01-22T21:23:21.840Z  INFO 10856 --- [    Test worker] u.a.c.p.ilm.selenium.TestSeleniumLookup  : Started TestSeleniumLookup in 0.696 seconds (process running for 157.718)
+2024-01-22T21:23:22.431Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 569mscomplexity is too low
+User(id=1, firstName=John, lastName=Tutor, email=john.tutor@example.com, roles=[UserRole(id=1, role=TUTOR, permissions=[RolePermission(id=1, permission=SCHEDULE_WORKSHOP), RolePermission(id=2, permission=CONFIRM_ATTENDANCE)])], passwordHash=f0677fab7955d2d8682ea4aa9f9b08eadcce8952e3d07e3c24e1c28e465ff32ead5acf34e359e5240fec8a2d12f27fbec60ba3cb51560df8f36fa18a4d3e7575d05f0a92d318d8bdc45133acccb80154, salt=f0677fab7955d2d8682ea4aa9f9b08ea)
+2024-01-22T21:23:23.072Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 631mscomplexity is too low
+User(id=2, firstName=Dan, lastName=Admin, email=admin@example.com, roles=[UserRole(id=2, role=ADMIN, permissions=[RolePermission(id=4, permission=ADMIN_UPLOAD), RolePermission(id=3, permission=ADMIN)])], passwordHash=5e2a7b31389d19b84c950a13ac2ac0660d26ad17e4f2464fcff1165e55206588ccf5c65d921454ed6c153ae77692149dfd63fd91c6dba1214e81a265a32636ec0cd95ebab357acc1af5c033eafe3f3fa, salt=5e2a7b31389d19b84c950a13ac2ac066)
+2024-01-22T21:23:23.737Z  WARN 10856 --- [    Test worker] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 647mscomplexity is too low
+User(id=3, firstName=John, lastName=SU, email=su@su.com, roles=[UserRole(id=3, role=SU, permissions=[RolePermission(id=5, permission=SU)])], passwordHash=5154aeac8b4ef4c7cd2616cc69c4507ee3358e53051fbf9a9a2ab13369f12765d0923afe0b36c97b5580f1babd95e1ee99881c4e142d7a75e7ba8d7a5a6f2f2567b923f16d3057a30f67f755284774d0, salt=5154aeac8b4ef4c7cd2616cc69c4507e)
+2024-01-22T21:23:23.744Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SAVED. Level: Level 3
+2024-01-22T21:23:23.745Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SAVED. Level: Level 5
+Added Levels
+2024-01-22T21:23:23.745Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 3
+2024-01-22T21:23:23.747Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.LevelsServiceImpl          : Level SEARCH. Level number: 5
+2024-01-22T21:23:23.751Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Understanding Leadership
+2024-01-22T21:23:23.754Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Building Effective Teams
+2024-01-22T21:23:23.756Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Understanding Stress Management
+2024-01-22T21:23:23.760Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Planning Change in the Workplace
+2024-01-22T21:23:23.763Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Solving Problems &amp; Making Decisions
+2024-01-22T21:23:23.766Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Managing Workplace Projects
+2024-01-22T21:23:23.768Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Becoming an Effective Leader 
+2024-01-22T21:23:23.771Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Leading Innovation &amp; Change
+2024-01-22T21:23:23.772Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Understanding Organisational Culture
+2024-01-22T21:23:23.774Z  INFO 10856 --- [    Test worker] u.a.c.p.i.p.s.WorkshopsServiceImpl       : ADD Workshop SUCCESS. Workshop: Managing Stress &amp; Conflict
+Added Workshops
+2024-01-22T21:23:23.777Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: johnwick@aol.com
+2024-01-22T21:23:23.782Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: test1@aol.com
+2024-01-22T21:23:23.784Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: test2@aol.com
+2024-01-22T21:23:23.790Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: danieldavis@aol.com
+2024-01-22T21:23:23.796Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: emilyevans@aol.com
+2024-01-22T21:23:23.801Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: frankfoster@aol.com
+2024-01-22T21:23:23.806Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: gracegarrett@aol.com
+2024-01-22T21:23:23.810Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: henryharrison@aol.com
+2024-01-22T21:23:23.817Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: isabellaisles@aol.com
+2024-01-22T21:23:23.821Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: jamesjohnson@aol.com
+2024-01-22T21:23:23.824Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: katiekenny@aol.com
+2024-01-22T21:23:23.827Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: lauralewis@aol.com
+2024-01-22T21:23:23.829Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: michaelmoore@aol.com
+2024-01-22T21:23:23.832Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: natalienelson@test.com
+2024-01-22T21:23:23.835Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: peterpark@aol.com
+2024-01-22T21:23:23.839Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: robertrussell@aol.com
+2024-01-22T21:23:23.842Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: sarahsmith@aol.com
+2024-01-22T21:23:23.844Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: thomasthompson@aol.com
+2024-01-22T21:23:23.849Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: victoriarwalker@aol.com
+2024-01-22T21:23:23.856Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: williamwilson@aol.com
+2024-01-22T21:23:23.862Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: xavierxavier@aol.com
+2024-01-22T21:23:23.864Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: yasminyoung@aol.com
+2024-01-22T21:23:23.873Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: zachariahzimmerman@aol.com
+2024-01-22T21:23:23.878Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: amandaanderson@test.com
+2024-01-22T21:23:23.882Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: brandonbrown@admiralgroup.co.uk
+2024-01-22T21:23:23.887Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: catherineclark@admiralgroup.co.uk
+2024-01-22T21:23:23.892Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: daviddavis@test.com
+2024-01-22T21:23:23.894Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: emilyevans@test.com
+2024-01-22T21:23:23.900Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: frankfoster@test.com
+2024-01-22T21:23:23.904Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: gracegarrett@test.com
+2024-01-22T21:23:23.909Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: henryharrison@test.com
+2024-01-22T21:23:23.913Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: isabellaives@test.com
+2024-01-22T21:23:23.916Z  INFO 10856 --- [    Test worker] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: jamesjohnson@test.com
+Candidate{id=1, firstName='John', lastName='Wick', dateOfBirth=1970-01-01, payrollNumber=123456, department='IT', role='Security', registrationDate=2023-12-01, registrationNumber=123456, email='johnwick@aol.com', level=null}
+Candidate{id=2, firstName='One', lastName='One0', dateOfBirth=1970-01-01, payrollNumber=234567, department='Claims', role='QA Engineer', registrationDate=2023-12-01, registrationNumber=234567, email='test1@aol.com', level=null}
+Candidate{id=3, firstName='Two', lastName='Two0', dateOfBirth=1970-01-01, payrollNumber=345678, department='IT', role='QA', registrationDate=2023-12-01, registrationNumber=null, email='test2@aol.com', level=null}
+2024-01-22T21:23:23.935Z  INFO 10856 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Using chromedriver 120.0.6099.109 (resolved driver for Chrome 120)
+2024-01-22T21:23:23.937Z  INFO 10856 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as C:\Users\c22123521\.cache\selenium\chromedriver\win64\120.0.6099.109\chromedriver.exe
+2024-01-22T21:23:24.920Z  INFO 10856 --- [o-auto-5-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-22T21:23:24.920Z  INFO 10856 --- [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-22T21:23:24.921Z  INFO 10856 --- [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-01-22T21:23:24.922Z  INFO 10856 --- [o-auto-5-exec-1] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:24.924Z  INFO 10856 --- [o-auto-5-exec-1] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:25.318Z  INFO 10856 --- [o-auto-5-exec-3] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:25.320Z  INFO 10856 --- [o-auto-5-exec-3] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:26.263Z  WARN 10856 --- [o-auto-5-exec-5] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 630mscomplexity is too low
+2024-01-22T21:23:26.902Z  WARN 10856 --- [o-auto-5-exec-5] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 637mscomplexity is too low
+2024-01-22T21:23:26.903Z  INFO 10856 --- [o-auto-5-exec-5] u.a.c.p.i.u.s.RolePermissionServiceImpl  : User logged in. User: su@su.com
+2024-01-22T21:23:26.907Z  INFO 10856 --- [o-auto-5-exec-6] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:26.908Z  INFO 10856 --- [o-auto-5-exec-6] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:27.046Z  INFO 10856 --- [o-auto-5-exec-8] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:27.048Z  INFO 10856 --- [o-auto-5-exec-8] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:27.048Z  INFO 10856 --- [o-auto-5-exec-8] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:23:27.178Z  INFO 10856 --- [-auto-5-exec-10] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:27.181Z  INFO 10856 --- [-auto-5-exec-10] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:27.182Z  INFO 10856 --- [-auto-5-exec-10] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:23:27.332Z  INFO 10856 --- [o-auto-5-exec-2] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:27.334Z  INFO 10856 --- [o-auto-5-exec-2] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:27.335Z  INFO 10856 --- [o-auto-5-exec-2] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Department: IT
+2024-01-22T21:23:27.593Z  INFO 10856 --- [o-auto-5-exec-4] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:27.594Z  INFO 10856 --- [o-auto-5-exec-4] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:27.595Z  INFO 10856 --- [o-auto-5-exec-4] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:23:27.695Z  INFO 10856 --- [o-auto-5-exec-6] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:27.696Z  INFO 10856 --- [o-auto-5-exec-6] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:27.696Z  INFO 10856 --- [o-auto-5-exec-6] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Department: Claims
+2024-01-22T21:23:27.809Z  INFO 10856 --- [o-auto-5-exec-8] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:27.810Z  INFO 10856 --- [o-auto-5-exec-8] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:27.811Z  INFO 10856 --- [o-auto-5-exec-8] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:23:27.915Z  INFO 10856 --- [-auto-5-exec-10] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:27.916Z  INFO 10856 --- [-auto-5-exec-10] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:27.917Z  INFO 10856 --- [-auto-5-exec-10] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Department: Operations
+2024-01-22T21:23:28.088Z  INFO 10856 --- [o-auto-5-exec-2] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:28.090Z  INFO 10856 --- [o-auto-5-exec-2] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:28.091Z  INFO 10856 --- [o-auto-5-exec-2] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:23:28.192Z  INFO 10856 --- [o-auto-5-exec-4] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:28.194Z  INFO 10856 --- [o-auto-5-exec-4] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:28.194Z  INFO 10856 --- [o-auto-5-exec-4] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Department: Finance
+2024-01-22T21:23:28.404Z  INFO 10856 --- [o-auto-5-exec-6] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:28.407Z  INFO 10856 --- [o-auto-5-exec-6] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:28.408Z  INFO 10856 --- [o-auto-5-exec-6] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:23:28.510Z  INFO 10856 --- [o-auto-5-exec-8] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:28.511Z  INFO 10856 --- [o-auto-5-exec-8] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:28.512Z  INFO 10856 --- [o-auto-5-exec-8] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. Department: Marketing
+2024-01-22T21:23:28.612Z  INFO 10856 --- [-auto-5-exec-10] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:23:28.613Z  INFO 10856 --- [-auto-5-exec-10] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:23:28.614Z  INFO 10856 --- [-auto-5-exec-10] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:23:28.792Z  INFO 10856 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-22T21:23:28.793Z  INFO 10856 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-01-22T21:23:28.797Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Starting ChromeDriver 120.0.6099.109 (3419140ab665596f21b385ce136419fde0924272-refs/branch-heads/6099@{#1483}) on port 3148
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.4</a> at 22 Jan 2024, 21:23:36</p>
+</div>
+</div>
+</body>
+</html>

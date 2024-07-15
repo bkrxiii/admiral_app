@@ -1,0 +1,20 @@
+@startuml C4_1_Context
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+
+title C4 Context Diagram for ILM application
+
+Person(admin, "Admin", "Responsible for maintaining the ILM program, generating reports, importing data, defining the course, viewing progress.")
+Person(tutor, "Tutor", "Responsible for scheduling workshops, marking work, marking attendance, viewing progress.")
+Person(user, "User", "Potential users - view their own progress.")
+
+System(ilmApp, "IlmApplication", "A web application for managing candidates as they progress in ILM certification.")
+
+System_Ext(database, "Database", "MariDB relational database accessed using JPA.")
+
+Rel(user, ilmApp, "Uses")
+Rel(tutor, ilmApp, "Uses")
+Rel(admin, ilmApp, "Uses")
+Rel(ilmApp, database, "Reads from and writes to")
+
+@enduml

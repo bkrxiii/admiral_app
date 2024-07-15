@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.ac.cardiff.phoenix.ilm.selenium.TestSeleniumAddCandidate" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-22T21:22:42" hostname="DSA10F60A8A6F79" time="3.817">
+  <properties/>
+  <testcase name="testAddCandidateSelenium()" classname="uk.ac.cardiff.phoenix.ilm.selenium.TestSeleniumAddCandidate" time="3.817"/>
+  <system-out><![CDATA[2024-01-22T21:22:42.672Z  INFO 10856 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [uk.ac.cardiff.phoenix.ilm.selenium.TestSeleniumAddCandidate]: TestSeleniumAddCandidate does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-22T21:22:42.673Z  INFO 10856 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration uk.ac.cardiff.phoenix.ilm.IlmApplication for test class uk.ac.cardiff.phoenix.ilm.selenium.TestSeleniumAddCandidate
+2024-01-22T21:22:42.684Z  INFO 10856 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Using chromedriver 120.0.6099.109 (resolved driver for Chrome 120)
+2024-01-22T21:22:42.691Z  INFO 10856 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as C:\Users\c22123521\.cache\selenium\chromedriver\win64\120.0.6099.109\chromedriver.exe
+2024-01-22T21:22:43.616Z  INFO 10856 --- [o-auto-1-exec-5] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:22:43.619Z  INFO 10856 --- [o-auto-1-exec-5] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:22:44.032Z  INFO 10856 --- [o-auto-1-exec-7] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:22:44.033Z  INFO 10856 --- [o-auto-1-exec-7] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:22:44.965Z  WARN 10856 --- [o-auto-1-exec-9] u.a.c.phoenix.ilm.security.PasswordUtil  : Hashing took 653mscomplexity is too low
+2024-01-22T21:22:44.965Z  INFO 10856 --- [o-auto-1-exec-9] u.a.c.p.i.u.s.RolePermissionServiceImpl  : User logged in. User: su@su.com
+2024-01-22T21:22:44.969Z  INFO 10856 --- [-auto-1-exec-10] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:22:44.972Z  INFO 10856 --- [-auto-1-exec-10] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:22:45.091Z  INFO 10856 --- [o-auto-1-exec-2] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:22:45.095Z  INFO 10856 --- [o-auto-1-exec-2] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:22:45.095Z  INFO 10856 --- [o-auto-1-exec-2] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:22:45.220Z  INFO 10856 --- [o-auto-1-exec-4] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:22:45.222Z  INFO 10856 --- [o-auto-1-exec-4] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:22:45.222Z  INFO 10856 --- [o-auto-1-exec-4] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:22:45.371Z  INFO 10856 --- [o-auto-1-exec-6] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:22:45.374Z  INFO 10856 --- [o-auto-1-exec-6] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:22:45.374Z  INFO 10856 --- [o-auto-1-exec-6] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:22:46.062Z  INFO 10856 --- [o-auto-1-exec-8] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:22:46.065Z  INFO 10856 --- [o-auto-1-exec-8] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:22:46.072Z  INFO 10856 --- [o-auto-1-exec-8] u.a.c.p.i.s.CandidateServiceImpl         : Candidate exists check. Email: favio@admiral.com
+2024-01-22T21:22:46.073Z  INFO 10856 --- [o-auto-1-exec-8] u.a.c.p.i.s.CandidateServiceImpl         : New Candidate SAVED. Email: favio@admiral.com
+Candidate{id=34, firstName='Favio', lastName='Becker', dateOfBirth=1980-11-13, payrollNumber=80250, department='Nth', role='nth', registrationDate=2023-11-11, registrationNumber=80250, email='favio@admiral.com', level=null}
+2024-01-22T21:22:46.084Z  INFO 10856 --- [o-auto-1-exec-9] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:22:46.086Z  INFO 10856 --- [o-auto-1-exec-9] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:22:46.088Z  INFO 10856 --- [o-auto-1-exec-9] u.a.c.p.i.s.CandidateServiceImpl         : Candidate search SUCCESS. ID: 34
+2024-01-22T21:22:46.234Z  INFO 10856 --- [o-auto-1-exec-1] u.a.c.p.i.p.s.WorkshopsServiceImpl       : Workshop SEARCH ALL.
+2024-01-22T21:22:46.236Z  INFO 10856 --- [o-auto-1-exec-1] u.a.c.p.i.p.s.LevelsServiceImpl          : Levels SEARCH ALL.
+2024-01-22T21:22:46.237Z  INFO 10856 --- [o-auto-1-exec-1] u.a.c.p.i.s.CandidateServiceImpl         : Candidates' list findAll().
+2024-01-22T21:22:46.481Z  INFO 10856 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-22T21:22:46.483Z  INFO 10856 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-01-22T21:22:46.488Z  INFO 10856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 120.0.6099.109 (3419140ab665596f21b385ce136419fde0924272-refs/branch-heads/6099@{#1483}) on port 37039
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+]]></system-err>
+</testsuite>

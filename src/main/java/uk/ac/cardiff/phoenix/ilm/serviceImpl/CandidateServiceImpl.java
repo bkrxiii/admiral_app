@@ -119,4 +119,9 @@ public class CandidateServiceImpl implements CandidateService {
         candidateRepo.save(candidateById);
     }
 
+    @Override
+    public void enrollCandidate(Object any, long anyLong) {
+
+    }
+
 }

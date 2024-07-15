@@ -1,0 +1,90 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+
+
+title C4 Component diagram for Spring Boot Project
+
+' Define Users
+Person(admin, "Admin", "Responsible for maintaining the ILM program, generating reports, importing data, defining the course, viewing progress.")
+Person(tutor, "Tutor", "Responsible for scheduling workshops, marking work, marking attendance, viewing progress.")
+Person(user, "User", "Potential users - view their own progress.")
+
+' Define System and Database
+System(springBootApp, "Spring Boot Application", "Java/Spring Boot", "Main application handling web requests.")
+ComponentDb(database, "Database", "Relational Database Using JPA", "Stores user and application data.")
+
+' Relationships between users and the application
+Rel(admin, springBootApp, "Uses")
+Rel(tutor, springBootApp, "Uses")
+Rel(user, springBootApp, "Uses")
+
+' Encapsulating Spring Boot Application
+rectangle springBootApp #white{
+  ' Define Controllers
+  Component(adminController, "Admin Controller", "Spring Controller", "Handles administrative functionalities.")
+  Component(reportsController, "Reports Controller", "Spring Controller", "Manages reporting functionalities.")
+  Component(eventController, "Event Controller", "Spring Controller", "Manages event-related operations.")
+  Component(levelsController, "Levels Controller", "Spring Controller", "Handles level management.")
+  Component(loginController, "Login Controller", "Spring Controller", "Manages user authentication.")
+  Component(lookupController, "Lookup Controller", "Spring Controller", "Handles data lookup operations.")
+  Component(errorController, "Error Controller", "Spring Controller", "Manages error handling.")
+  Component(rootController, "Root Controller", "Spring Controller", "Handles Landing Page.")
+  Component(submitController, "Submit Controller", "Spring Controller", "Manages submission of data.")
+  Component(globalControllerAdvice, "Global Controller Advice", "Spring Controller", "Provides level and workshop data to all controllers.")
+
+  ' Define Services
+  Component(uploadedFileService, "Uploaded File Service", "Spring Service", "Manages file upload/download operations.")
+  Component(eventservice, "EventService", "Spring Service", "Managed Retrieval of Events")
+  Component(homeworkservice, "HomeworkService", "Spring Service", "Manages tracking when homework is completed.")
+  Component(levelsservice, "LevelsService", "Spring Service", "Manages the creation and reading of levels.")
+  Component(workshopsservice, "WorkshopsService", "Spring Service", "Manages the creation and reading of Workshops.")
+  Component(candidatereportservice, "CandidateReportService", "Spring Service", "Generates Reports of Candidate information.")
+  Component(candidateservice, "CandidateService", "Spring Service", "Manages the candidate information. Add, edit, find etc")
+  Component(uploadedfileprocessservice, "UploadedFileProcessService", "Spring Service", "Processes Uploaded File to Load data")
+  Component(rolepermissionservice, "RolePermissionService", "Spring Service", "Manages Permissions for user roles")
+  Component(userroleservice, "UserRoleService", "Spring Service", "Manages roles of a User.")
+  Component(userservice, "UserService", "Spring Service", "Manages User Security")
+
+  Component(dailyEventTask, "Daily Event Task", "Spring Task", "Runs daily and hourly to check for events that need to be updated.")
+}
+
+' Relationships between application and controllers
+Rel(springBootApp, adminController, "Uses")
+Rel(springBootApp, reportsController, "Uses")
+Rel(springBootApp, eventController, "Uses")
+Rel(springBootApp, levelsController, "Uses")
+Rel(springBootApp, loginController, "Uses")
+Rel(springBootApp, lookupController, "Uses")
+Rel(springBootApp, errorController, "Uses")
+Rel(springBootApp, rootController, "Uses")
+Rel(springBootApp, submitController, "Uses")
+
+'Relationship between controllers and services
+Rel(adminController, uploadedFileService, "Uses")
+Rel(reportsController, "candidatereportservice", "Uses")
+Rel(adminController, "uploadedfileprocessservice", "Uses")
+
+Rel(loginController, userservice, "Uses")
+Rel(loginController, userroleservice, "Uses")
+Rel(loginController, rolepermissionservice, "Uses")
+
+Rel(lookupController, candidateservice, "Uses")
+Rel(submitController, candidateservice, "Uses")
+
+Rel(levelsController, levelsservice, "Uses")
+Rel(eventController, eventservice, "Uses")
+
+Rel(dailyEventTask, eventservice, "Uses")
+
+Rel(rootController, candidateservice, "Uses")
+
+'Relationship between services and services
+Rel(candidatereportservice, uploadedFileService, "Uses")
+Rel(candidatereportservice, candidateservice, "Uses")
+Rel(uploadedFileService, candidateservice, "Uses")
+
+' Relationships between services and database
+Rel(springBootApp, database, "Reads/Writes")
+
+@enduml

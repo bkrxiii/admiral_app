@@ -14,7 +14,7 @@ public class Workshop {
     // workshopId is primary key
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long workshopId;
+    private Long workshopId;
     // workshopName is a string version of workshop name. e.g. "Workshop 1"
     private String workshopName;
     // workshopDescription is there in case Niel wants to add any extra descriptions of the workshops (can be deleted if not needed)
