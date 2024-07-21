@@ -1,0 +1,181 @@
+<!--Ai was used as an influence -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{base-template :: headFragment(${title_insert})}">
+  <title>Default Title</title></head>
+<body>
+<!-- Navbar -->
+<nav th:replace="~{base-template :: navbar}"></nav>
+<nav th:replace="~{base-template :: navbar-candidate}"></nav>
+
+<div th:if="${message}" class="alert alert-info alert-dismissible fade show mt-4" role="alert">
+  <p th:text="${message}" class="mb-0"></p>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div id="error" class="alert-info mt-4 font-weight-bold"></div>
+
+
+
+<h1 style="margin-left: 1vw"> This is the submission page.</h1>
+<!--Fields to submit information -->
+
+<div th:fragment="form" style="margin-left: 1vw">
+<form th:action="@{/submission/}" method="post" id="form">
+  <div class="form-row">
+    <div class="form-group col-sm-2">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First Name" required>
+    </div>
+    <div class="form-group col-sm-2">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="form-group col-sm-2">
+
+    <label for="dateOfBirth">Date Of Birth:</label>
+    <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required>
+    </div>
+
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-2">
+      <label for="payrollNumber">Payroll Number:</label>
+      <input type="text" id="payrollNumber" name="payrollNumber" class="form-control" placeholder="00000" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-3">
+      <label for="department">Department:</label>
+      <input type="text" id="department" name="department" class="form-control" placeholder="Which department is the candidate in?" required>
+    </div>
+    <div class="form-group col-3">
+      <label for="role">Role:</label>
+      <input type="text" id="role" name="role" class="form-control" placeholder="What role does the candidate have?" required>
+    </div>
+  </div>
+
+
+  <div class="form-row">
+    <div class="form-group col-3">
+      <label for="registrationDate">ILM Registration Date:</label>
+      <input type="date" id="registrationDate" name="registrationDate" class="form-control" required>
+    </div>
+
+    <div class="form-group col-3">
+      <label for="registrationNumber">ILM Registration Number:</label>
+      <input type="text" id="registrationNumber" name="registrationNumber" class="form-control" placeholder="12345">
+    </div>
+
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-3">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="Candidate's contact email here..." required>
+    </div>
+  </div>
+
+
+  <button type="submit">Submit</button>
+</form>
+</div>
+
+
+<!-- Bootstrap scripts -->
+<div th:replace="~{base-template :: bootstrap-scripts}"></div>
+
+<script>
+    // Values to check
+    const form = document.getElementById("form");
+    const firstName = document.getElementById("firstName");
+    const lastName = document.getElementById("lastName");
+    const dateOfBirth = document.getElementById("dateOfBirth");
+    const payrollNumber = document.getElementById("payrollNumber");
+    const department = document.getElementById("department");
+    const role = document.getElementById("role");
+    const registrationDate = document.getElementById("registrationDate");
+    const registrationNumber = document.getElementById("registrationNumber");
+    const email = document.getElementById("email");
+
+    const emailRegexPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const numberRegexPattern = /^[0-9]+$/;
+    const currentDate = new Date();
+    // const emailAdmiralRegexPattern = /^([^@\s]+)@admiral(\.[^\s]+)+$/;
+
+    const errorElement = document.getElementById("error");
+
+    const listOfThingsToCheck = [firstName, lastName, dateOfBirth, payrollNumber, department, role, registrationDate, email];
+
+
+    // text for messages
+    const firstNameString = "First Name";
+    const lastNameString = "Last Name";
+    const dateOfBirthString = "Date Of Birth";
+    const payrollNumberString = "Payroll Number";
+    const departmentString = "Department";
+    const roleString = "Role";
+    const registrationDateString = "ILM Registration Date";
+    const registrationNumberString = "ILM Registration Number";
+    const emailString = "Email";
+
+
+    form.addEventListener("submit", (e) => {
+      let errorMessage = [];
+
+      if (numberRegexPattern.test(firstName.value)){
+        errorMessage.push(firstNameString + " must be a string");
+      }
+      if (numberRegexPattern.test(lastName.value)){
+        errorMessage.push(lastNameString + " must be a string");
+      }
+      if (parseInt(dateOfBirth.value.substring(0,4)) > currentDate.getFullYear() - 18){
+        errorMessage.push("Candidate must be over 18");
+      }
+      if (parseInt(dateOfBirth.value.substring(0,4)) < currentDate.getFullYear() - 100){
+        errorMessage.push("Candidate must be under 100 years old");
+      }
+      if (payrollNumber.value.length !== 5){
+        errorMessage.push("Payroll number must be 5 digits long");
+      }
+      if (!numberRegexPattern.test(payrollNumber.value)){
+        errorMessage.push("Payroll number must be a number");
+      }
+      if (numberRegexPattern.test(department.value)){
+        errorMessage.push(departmentString + " must be a string");
+      }
+      if (numberRegexPattern.test(role.value)){
+            errorMessage.push(roleString + " must be a string");
+      }
+      if (parseInt(registrationDate.value.substring(0,4)) > currentDate.getFullYear()){
+        errorMessage.push("Registration date cannot be in the future");
+      }
+      if (!registrationNumber.value || numberRegexPattern.test(registrationNumber.value)){
+      } else {
+        errorMessage.push(registrationNumberString + " must be a number or left blank");
+      }
+      if (!emailRegexPattern.test(email.value)){
+        errorMessage.push("Please enter a valid email address");
+      }
+      if (!emailAdmiralRegexPattern.test(email.value)){
+          errorMessage.push("Please enter an Admiral email address");
+      }
+
+      // do we have errors?
+      if (errorMessage.length > 0) {
+        e.preventDefault();
+        errorElement.innerText = errorMessage.join(', ');
+      }
+    });
+
+    // spaghetti!
+
+</script>
+
+</body>
+</html>

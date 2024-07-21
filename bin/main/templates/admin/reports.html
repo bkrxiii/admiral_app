@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{base-template :: headFragment(${title_insert})}">
+    <title>Generate Reports</title>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav th:replace="~{base-template :: navbar}"></nav>
+<nav th:replace="~{base-template :: navbar-admin}"></nav>
+
+
+<div th:if="${message}" class="alert alert-warning" th:text="${message}">
+    Error: message error
+</div>
+
+<!-- Content -->
+<div class="container mt-3">
+    <div class="mx-auto" style="max-width: 600px;"> <!-- Adjust max-width as needed -->
+        <h1>Generate Reports</h1>
+        <hr>
+
+        <!-- Form 1: Run Active Candidates -->
+        <form method="post" th:action="@{/admin/reports/simpleactivecandidates}">
+            <button type="submit" class="btn btn-primary btn-block">Run Active Candidates</button>
+        </form>
+
+        <hr> <!-- Add a horizontal line to separate the forms -->
+
+        <!-- Form 2: Candidate Report with Date Pickers -->
+        <form method="post" th:action="@{/admin/reports/candidatereport}" id="reportForm" novalidate>
+            <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" class="form-control" required>
+                <div class="invalid-feedback">
+                    End date must be after the start date.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="level">Select Level:</label>
+                <select class="form-control" id="level" name="levelId">
+                    <option th:each="level : ${levelsList}" th:value="${level.levelId}" th:text="${level.levelName}">Default Level</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Generate Candidate Report</button>
+        </form>
+    </div>
+</div>
+
+<!-- Bootstrap scripts -->
+<div th:replace="~{base-template :: bootstrap-scripts}"></div>
+
+
+
+
+
+</body>
+
+</html>
