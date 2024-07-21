@@ -10,7 +10,6 @@ import uk.ac.cardiff.phoenix.ilm.model.Candidate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Collections;
 @Data
 @Entity
 @NoArgsConstructor
@@ -29,6 +28,7 @@ public class Event {
     @NotNull
     private EventStatus eventStatus;
 
+    // builder pattern in the future.
     public Event(Workshop workshopEvent, LocalDateTime eventTime, List<Candidate> applicants, EventStatus eventStatus) {
         this.workshopEvent = workshopEvent;
         this.eventTime = eventTime;

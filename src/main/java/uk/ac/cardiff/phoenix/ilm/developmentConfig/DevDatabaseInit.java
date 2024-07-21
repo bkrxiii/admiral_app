@@ -4,13 +4,14 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import uk.ac.cardiff.phoenix.ilm.model.Candidate;
 import uk.ac.cardiff.phoenix.ilm.programs.model.Level;
+import uk.ac.cardiff.phoenix.ilm.programs.service.HomeworkService;
 import uk.ac.cardiff.phoenix.ilm.programs.service.LevelsService;
 import uk.ac.cardiff.phoenix.ilm.programs.service.WorkshopsService;
-import uk.ac.cardiff.phoenix.ilm.model.Candidate;
 import uk.ac.cardiff.phoenix.ilm.service.CandidateService;
-import uk.ac.cardiff.phoenix.ilm.users.model.User;
 import uk.ac.cardiff.phoenix.ilm.users.model.RolePermission;
+import uk.ac.cardiff.phoenix.ilm.users.model.User;
 import uk.ac.cardiff.phoenix.ilm.users.model.UserRole;
 import uk.ac.cardiff.phoenix.ilm.users.service.RolePermissionService;
 import uk.ac.cardiff.phoenix.ilm.users.service.UserRoleService;
@@ -31,15 +32,17 @@ public class DevDatabaseInit {
     private final LevelsService levelService;
     private final WorkshopsService workshopService;
     private final CandidateService  candidateService;
+    private final HomeworkService homeworkService;
 
 
-    public DevDatabaseInit(UserService userService, UserRoleService userRoleService, RolePermissionService rolePermissionService, LevelsService levelsService, WorkshopsService workshopsService, CandidateService candidateService) {
+    public DevDatabaseInit(UserService userService, UserRoleService userRoleService, RolePermissionService rolePermissionService, LevelsService levelsService, WorkshopsService workshopsService, CandidateService candidateService, HomeworkService homeworkService) {
         this.userRoleService = userRoleService;
         this.userService = userService;
         this.rolePermissionService = rolePermissionService;
         this.levelService = levelsService;
         this.workshopService = workshopsService;
         this.candidateService = candidateService;
+        this.homeworkService = homeworkService;
     }
 
 
@@ -191,6 +194,7 @@ public class DevDatabaseInit {
             candidateService.saveCandidate(candidate32);
             candidateService.saveCandidate(candidate33);
 
+            // print out just for me, this can be removed later
             System.out.println(candidate);
             System.out.println(candidate2);
             System.out.println(candidate3);

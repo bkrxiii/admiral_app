@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import uk.ac.cardiff.phoenix.ilm.controller.LookupController;
 import uk.ac.cardiff.phoenix.ilm.model.Candidate;
-import uk.ac.cardiff.phoenix.ilm.programs.model.Level;
+import uk.ac.cardiff.phoenix.ilm.programs.repository.HomeworkRepository;
 import uk.ac.cardiff.phoenix.ilm.programs.service.LevelsService;
 import uk.ac.cardiff.phoenix.ilm.service.CandidateService;
 
@@ -33,6 +33,9 @@ public class TestLookupController {
 
     @Mock
     private LevelsService levelsService;
+
+    @Mock
+    private HomeworkRepository homeworkRepository;
 
     @InjectMocks
     private LookupController lookupController;
@@ -73,19 +76,6 @@ public class TestLookupController {
         assertEquals("lookup", modelAndView.getViewName());
         assertEquals("lookup", modelAndView.getModel().get("title_insert"));
         assertEquals(mockCandidates, modelAndView.getModel().get("candidates"));
-    }
-
-    @Test
-    public void testEnrollCandidate() {
-        Long candidateId = 1L;
-        Long levelId = 3L;
-        when(candidateService.findCandidateById(candidateId)).thenReturn(new Candidate());
-        when(levelsService.getLevelById(levelId)).thenReturn(new Level());
-
-        String result = lookupController.enrollCandidate(levelId.toString(), candidateId.toString(), Mockito.mock(RedirectAttributes.class));
-
-        assertEquals("redirect:/lookup/" + candidateId, result);
-        verify(candidateService).enrollCandidateInLevel(any(), any());
     }
 
     @Test

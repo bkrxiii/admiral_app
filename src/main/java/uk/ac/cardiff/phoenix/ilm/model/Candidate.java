@@ -96,4 +96,8 @@ public class Candidate {
                 ", level=" + level +
                 '}';
     }
+
+    public Object thenReturn(Candidate candidate) {
+        return null;
+    }
 }

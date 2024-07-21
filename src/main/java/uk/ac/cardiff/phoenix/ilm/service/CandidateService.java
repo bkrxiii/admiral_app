@@ -37,4 +37,6 @@ public interface CandidateService {
     List<Candidate> findUnregisteredCandidatesOverOneWeekOld();
 
     void registerILM(Candidate candidateById, Long ilmNumber);
+
+    void enrollCandidate(Object any, long anyLong);
 }

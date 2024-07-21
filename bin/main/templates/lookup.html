@@ -1,0 +1,66 @@
+<!--Ai was used as an influence-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{base-template :: headFragment(${title_insert})}">
+    <title>Default Title</title></head>
+<body>
+<!-- Navbar -->
+<nav th:replace="~{base-template :: navbar}"></nav>
+<nav th:replace="~{base-template :: navbar-candidate}"></nav>
+
+<div th:if="${message}" class="alert alert-info alert-dismissible fade show mt-4" role="alert">
+    <p th:text="${message}" class="mb-0"></p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+<table class="table table-bordered table-striped" id="candidates">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Payroll Number</th>
+            <th>Department</th>
+            <th>Role</th>
+            <th>ILM Registration Date</th>
+            <th>ILM Registration Number</th>
+            <th>Email</th>
+            <th>ILM Level</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr th:each="candidate : ${candidates}">
+        <td>
+            <a th:href="@{/lookup/{id}(id=${candidate.id})}" th:text="${candidate.id}">ID</a>
+        </td>
+            <td th:text="${candidate.firstName}">First Name</td>
+            <td th:text="${candidate.lastName}">Last Name</td>
+            <td th:text="${candidate.dateOfBirth}">Date of Birth</td>
+            <td th:text="${candidate.payrollNumber}">Payroll Number</td>
+        <td>
+            <a th:href="@{/lookup/department/{department}(department=${candidate.department})}" th:text="${candidate.department}">Department</a>
+        </td>
+
+            <td th:text="${candidate.role}">Role</td>
+            <td th:text="${candidate.registrationDate}">ILM Registration Date</td>
+            <td th:text="${candidate.registrationNumber}">ILM Registration Number</td>
+            <td th:text="${candidate.email}">Email</td>
+            <td th:text="${candidate.level}">Level</td>
+        </tr>
+
+    </tbody>
+
+
+
+</table>
+
+<!-- Bootstrap scripts -->
+<div th:replace="~{base-template :: bootstrap-scripts}"></div>
+</body>
+</html>

@@ -4,23 +4,27 @@ How to run
 
 Requires Java 17
 
-Make sure you have a mariadb running with an empty ILM schema
-(run the sql in src/main/resources/schema.sql)
-
-Set an environmental password for the database
-DB_PASSWORD={your password}
-
-run the GRADLE task 'bootRun' to build the jar
+- Make sure you have a mariadb running with an empty ILM schema ("CREATE DATABASE ILM; commit;")
+- Create user 'ilm'@'localhost' and set password to your preference.
+- provide with ALL privileges `GRANT ALL PRIVILEGES ON ilm.* TO 'ilm'@'localhost';`
+- Set an environmental password for the database DB_PASSWORD={your password}
+- run the GRADLE task 'assemble' to build the jar `ILM-0.0.1-SNAPSHOT.jar` in /build/libs/
+  - you may have to run 'clean' prior just in case.
 
 run jar from the command line with
 ```bash
 java -jar -Dspring.profiles.active=dev build/libs/ilm-0.0.1-SNAPSHOT.jar
 ```
+or simply the ilm-0.0.1-SNAPSHOT.jar if preferred.
 
-or if you need to include your db passwrod
+or if you need to include your db password
 ```bash
 java -jar -Dspring.profiles.active=dev -DB_PASSWORD={your password} build/libs/ilm-0.0.1-SNAPSHOT.jar
 ```
+
+When running, you will be able to find the app under: http://localhost:8081/
+
+---
 
 To run from intellij run with this profile, as intellij has alot of overhead this reduces password complexity to prevent slowdown 
 devintellij
