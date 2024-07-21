@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="uk.ac.cardiff.phoenix.ilm.ExcelProcessor.ExcelCandidateProcessorFactoryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-22T21:22:01" hostname="DSA10F60A8A6F79" time="1.02">
-  <properties/>
-  <testcase name="testCandidateExcelProcessor()" classname="uk.ac.cardiff.phoenix.ilm.ExcelProcessor.ExcelCandidateProcessorFactoryTest" time="0.975"/>
-  <testcase name="TestNoRowsAddedOnFail()" classname="uk.ac.cardiff.phoenix.ilm.ExcelProcessor.ExcelCandidateProcessorFactoryTest" time="0.044"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
